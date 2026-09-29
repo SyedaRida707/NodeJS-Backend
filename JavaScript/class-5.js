@@ -189,11 +189,14 @@
 
 // It uses the ?. operator.
 
-// const user = {
-//     name: 'rida'
-// }
+const user = {
+    name: 'rida'
+}
 
 // Without Optional Chaining ❌
+// address = undefine, city = error
+// console.log(user.address);
+// console.log(user.address.city);
 // console.log(user.address.city);
 // Here address doesn't exist, so JavaScript gives: error
 
