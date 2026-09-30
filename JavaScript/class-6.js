@@ -142,7 +142,8 @@
 //         return a / b;
 //     }
 //     catch (err) {
-//         return err.message;
+//         // return err
+//         // return err.message;
 //     }
 // }
 // const result = divide(10, 0);
@@ -187,56 +188,126 @@
 // error.message
 
 
+// 3. Custom Error
+// We can create our own error message:
+// throw new Error("Cannot divide by zero");
+
+// Here:
+// new Error() → creates an Error object
+// "Cannot divide by zero" → custom error message
+// throw → raises/sends the error
+// catch(err) receives the Error object
+
+// throw can be used for validation
+
+// try → contains code that may cause an error.
+// catch → handles the error.
+// throw → manually raises an error.
+// new Error() → creates an Error object.
+// err → receives the Error object.
+// err.message → gets the error message.
+// If an error occurs before throw, the throw line will not execute.
+
+// throw = create/raise your own error
+// catch = receive/handle that error
+// err.message = get the message from the Error object
 
 
+// -------------------------------------------------------
+// 1. Compile-Time Error
+// Code run hone se pehle code ko check/parse karte waqt error aaye.
+
+// Example:
+// let x = ;
+
+// Yahan syntax galat hai, isliye JavaScript code ko properly parse nahi kar sakti.
+// ➡️ Syntax error = compile/parse time type of error
 
 
+// 2. Runtime Error
+// Code run hone ke baad, execution ke waqt error aaye.
+
+// Example:
+// console.log(y);
+
+// Agar y defined nahi hai:
+// ReferenceError: y is not defined
+
+// Syntax sahi hai, lekin code execute karte waqt problem aayi.
+
+// -------------------------------------------------------
+// reduce() is an array method used to reduce all array elements into a single final value.
+
+// let a = [1,2,3,4];
+// let result = a.reduce((accumulator,CurrElem)=>{
+//    return accumulator +=CurrElem
+// },0);
+// console.log(result);
+
+//flow
+// [1, 2, 3, 4]
+
+// 0 + 1 = 1
+// 1 + 2 = 3
+// 3 + 3 = 6
+// 6 + 4 = 10
+
+// Final result → 10
+
+// Reduce Real usecase
+// 1. Shopping Cart ka Total Price 🛒
+// Real website par cart mein multiple products hote hain:
+
+// const cart = [
+//     { name: "Shirt", price: 2000 },
+//     { name: "Shoes", price: 5000 },
+//     { name: "Bag", price: 3000 }
+// ];
+// const total = cart.reduce((sum, product) => {
+//     return sum += product.price;
+// }, 0);
+// console.log(total);
+
+// 2. Total Marks Calculate Karna 🎓
+// const marks = [80, 75, 90, 85];
+// const total = marks.reduce((sum,nums)=> {
+//     return sum += nums;
+// },0);
+// console.log(total);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//new Error(...) se hum Error object banate hain,
-//aur catch (err) us object ko receive karta hai. 👍
-//➡️ ek Error object create karta hai.
-//new Error("Cannot divide by zero")
-
-//Phir throw us Error object ko catch tak bhej deta hai:
-//➡️ custom Error create/raise karta hai
-// throw new Error("Something went wrong");
-
-//Yahan err us Error object ko receive karta hai.
-//➡️ Us error ko receive/handle karta hai
-// catch (err) {
-//     console.log(err.message);
-// }
-
-
-// throw → error bhejo/raise karo
-// catch → error receive & handle karo
-
-// new Error() → Error object create
-// throw → Error object send/raise
-// catch(err) → Error object receive
-// err.message → Error ka message get
-
-// try {
-//     let y;
-//     if (y === undefined) {
-//         throw new Error('y is actually not define');
+// 3. Data ko Count Karna
+// const fruits = ["apple", "banana", "apple", "orange", "apple"];
+// const count = fruits.reduce((sum, fruit) => {
+//     if (fruit === 'apple') {
+//         sum++
 //     }
-//     let x = y + 1;
-// } catch (err) {
-//     console.log(err.message);
-// }
+//     return sum;
+// },0);
+// console.log(count);
+
+// 4. Data → Grouping
+// Suppose products different categories ke hain:
+
+// const products = [
+//     { name: "Shirt", category: "clothes" },
+//     { name: "Shoes", category: "shoes" },
+//     { name: "Jeans", category: "clothes" },
+//     { name: "Sandal", category: "shoes" }
+// ];
+
+// const grouped = products.reduce((result, product) => {
+    
+//     if (!result[product.category]) {
+//         result[product.category] = [];
+//     }
+    
+//     result[product.category].push(product);
+    
+//     return result;
+// }, {});
+// console.log(grouped);
+
+// Real-world rule
+// reduce() tab use karo jab:
+// Array ke multiple items ko process karke ek final result banana ho.
