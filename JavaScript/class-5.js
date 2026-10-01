@@ -189,9 +189,9 @@
 
 // It uses the ?. operator.
 
-const user = {
-    name: 'rida'
-}
+// const user = {
+//     name: 'rida'
+// }
 
 // Without Optional Chaining ❌
 // address = undefine, city = error

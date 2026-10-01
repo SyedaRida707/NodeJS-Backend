@@ -213,6 +213,41 @@
 // err.message = get the message from the Error object
 
 
+
+//EXAMPLE 3: DOM Example
+// try {
+//   document.getElementById("btn").addEventListener("click", () => {
+//     console.log("Clicked");
+//   });
+// } catch (err) {
+//   console.log("Button not found");
+// }
+// Without try/catch → app crashes With try/catch → app survives
+
+
+// FINALLY (VERY IMPORTANT)
+// finally always runs (error ho ya na ho)
+
+// try {
+//   console.log("Try");
+// } catch (e) {
+//   console.log("Catch");
+// } finally {
+//   console.log("Always runs");
+// }
+
+// EXAMPLE 4: Cleanup Example
+// try {
+//   console.log("Opening file");
+//   throw new Error();
+// } catch {
+//   console.log("Error occurred");
+// } finally {
+//   console.log("Closing file");
+// }
+
+// ONE-LINE SUMMARY (EXAM / INTERVIEW)
+// try...catch prevents application crashes by handling runtime errors gracefully.
 // -------------------------------------------------------
 // 1. Compile-Time Error
 // Code run hone se pehle code ko check/parse karte waqt error aaye.
@@ -293,17 +328,17 @@
 //     { name: "Shirt", category: "clothes" },
 //     { name: "Shoes", category: "shoes" },
 //     { name: "Jeans", category: "clothes" },
-//     { name: "Sandal", category: "shoes" }
+//     { name: "Sandal", category: "shoes" },
+//     { name: 'staller', category: 'clothes' }
 // ];
-
 // const grouped = products.reduce((result, product) => {
-    
+
 //     if (!result[product.category]) {
 //         result[product.category] = [];
 //     }
-    
+
 //     result[product.category].push(product);
-    
+
 //     return result;
 // }, {});
 // console.log(grouped);
@@ -311,3 +346,59 @@
 // Real-world rule
 // reduce() tab use karo jab:
 // Array ke multiple items ko process karke ek final result banana ho.
+
+// -------------------------------------------------------
+
+
+// Reducer Pattern in JS
+//Reducer Pattern is a pattern where a reducer function takes the
+//current state and an action, then returns a new updated state..
+
+// state = current data
+// action = kya karna hai
+// reducer = change kaise karna hai decide karta hai
+
+
+// function Reducer(state, action) {
+//     if (action.type === 'INCREMENT') {
+//         return state + 1;
+//         // return ++state;
+//         // return state++;
+//     }
+//     if (action.type === 'DECREMENT') {
+//         return state - 1;
+//         // return --state;
+//         // return state--;
+//     }
+//     return state;
+// }
+// let state = 0;
+
+// state = Reducer(state, { type: "INCREMENT" });
+// console.log(state); // 1
+
+// state = Reducer(state, { type: "INCREMENT" });
+// console.log(state); // 2
+
+// state = Reducer(state, { type: "INCREMENT" });
+// console.log(state); // 3
+
+// state = Reducer(state, { type: "DECREMENT" });
+// console.log(state); // 1
+
+// Flow:
+
+// Current State + Action
+//         ↓
+//      Reducer
+//         ↓
+//     New State
+
+// -------------------------------------------------------
+// Javascript is asynchronous and browser is synchronous?
+// JavaScript is single-threaded and executes synchronous code by default. 
+// It also supports asynchronous operations with the help of browser Web APIs, 
+// the Event Loop, and other runtime features.
+
+// JavaScript → Synchronous by default + Asynchronous capabilities.
+// Browser → Provides Web APIs for asynchronous operations.
