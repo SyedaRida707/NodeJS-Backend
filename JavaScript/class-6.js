@@ -426,5 +426,3 @@
 // JavaScript Call Stack
 //    ↓
 // "B"
-
-

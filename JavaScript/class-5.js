@@ -102,11 +102,9 @@
 // }
 
 // let names = ["Rida", "Atruba", "Qurat"];
-
 // names.forEach((name) => {
 //     greet(name);
 // });
-
 
 // map() creates a new array by transforming each element of the original array.
 // It is used when we want to change/transform every element.
@@ -181,25 +179,20 @@
 
 // SyntaxError : Occurs when JavaScript syntax is invalid.
 // let a 10;
-
 // --------------------------------------------------------
 // what is optional chaining in js?
 // Optional chaining is used to safely access a property or method of an object
 // without getting an error if that property doesn't exist.
 
 // It uses the ?. operator.
-
 // const user = {
 //     name: 'rida'
 // }
-
 // Without Optional Chaining ❌
 // address = undefine, city = error
 // console.log(user.address);
 // console.log(user.address.city);
-// console.log(user.address.city);
 // Here address doesn't exist, so JavaScript gives: error
-
 
 // With Optional Chaining ✅
 // console.log(user.address?.city);
@@ -221,11 +214,9 @@
 // console.log(user.number?.phone);
 
 // --------------------------------------------------------
-
 //Single-Threaded vs Synchronous in JavaScript
 // 1. Single-Threaded
 // JavaScript is single-threaded, which means it has one main thread for executing JavaScript code.
-
 // A thread is like a worker that executes code.
 
 // One Main Thread
@@ -242,19 +233,16 @@
 // console.log("B");
 // console.log("C");
 
-
 // 2. Synchronous
 // Synchronous execution means code is executed in order, 
 // and the next operation waits for the previous operation to finish.
 
 // Example:
-
 // console.log("A");
 // console.log("B");
 // console.log("C");
 
 // Execution:
-
 // A → complete
 //       ↓
 // B → complete
@@ -269,18 +257,12 @@
 
 // 1 Chef
 //    ↓
-// Cooking Task
-
-// This represents one main thread.
+// Cooking Task : This represents one main thread.
 
 // Synchronous
-
-// The chef says:
-// "I'll completely finish Task A, then I'll start Task B."
-
+// The chef says: "I'll completely finish Task A, then I'll start Task B."
 // Task A → Finish → Task B → Finish → Task C
 // +++++++++++++++++++++++++++++++++++++++++++++
-
 
 // --------------------------------------------------------
 
@@ -297,7 +279,7 @@
 //Callback Hell is a situation where multiple nested callbacks make asynchronous 
 //code difficult to read, understand, and maintain.
 
-//asynchronus
+//asynchronus example
 // console.log('A');
 // setTimeout(() => {
 //     console.log('B');
@@ -324,7 +306,4 @@
 // callback execute
 
 // Aur har next setTimeout() bhi asynchronous hai.
-
 // --------------------------------------------------------
-
-
