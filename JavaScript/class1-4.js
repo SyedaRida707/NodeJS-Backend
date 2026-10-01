@@ -73,6 +73,7 @@
 // Compile Time
 // Compile time is the time when our code is converted into machine language before
 // the program runs.- and execute it.
+//syntax error jab code karte hue aye 
 
 // Run Time
 // Run time is the time when the program is actually running and executing the code.
@@ -224,7 +225,6 @@
 // nested array
 // let arr =[[[0,1],[3,4]]];
 // console.log(arr[0][1][1]);
-
 
 // --------------- Class 3 -----------------
 
@@ -535,7 +535,6 @@
 //? aur memory continuously occupied hoti rehti hai,
 //? usay Memory Leak kehte hain.
 
-
 // Garbage Collection
 // JavaScript mein Garbage Collector ek automatic system hai jo unused/unreachable
 // data ko memory se remove karta hai.
@@ -566,12 +565,11 @@
 // user ─────► null
 // { name: "Rida" }  ← unreachable
 
-// Garbage Collector eventually is unused object ki memory reclaim kar sakta hai. ♻️
+// Garbage Collector eventually is unused object ki memory reclaim kar sakta hai. future me♻️
 
 //? Garbage Collection:
 //? JavaScript ka automatic process jo unused/unreachable
 //? data ki memory ko free/reclaim karta hai.
-
 
 // /? Debugger:
 // Debugger ka use code ko step-by-step check karne ke liye hota hai,
@@ -579,7 +577,6 @@
 
 //? Code ko pause karke step-by-step check karne ke liye use hota hai.
 //? Isse hum variables ki values aur code execution ko check kar sakte hain.
-
 
 //? Synchronous:
 //? Code execution line-by-line hoti hai.
@@ -617,6 +614,7 @@
 //         see : 'nature'
 //     }
 // }
+
 // let newObj = {...obj}
 // console.log(newObj);
 // newObject ka address change hogya memory me isliye false
@@ -657,36 +655,6 @@
 // ];
 
 // const copy = structuredClone(arr);
-
-// copy[2].name = "Ali";
-
+// copy[2].name = "Atruba";
 // console.log(arr[2].name);   // Rida
 // console.log(copy[2].name);  // Ali
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
