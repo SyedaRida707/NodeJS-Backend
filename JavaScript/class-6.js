@@ -395,10 +395,36 @@
 //     New State
 
 // -------------------------------------------------------
-// Javascript is asynchronous and browser is synchronous?
+// Is the browser asynchronous and JavaScript synchronous?
+// JavaScript executes code synchronously by default, 
+// but it can perform asynchronous operations with the help of Web APIs provided by the browser.
+
 // JavaScript is single-threaded and executes synchronous code by default. 
-// It also supports asynchronous operations with the help of browser Web APIs, 
-// the Event Loop, and other runtime features.
+// It also supports asynchronous operations with the help of browser Web APIs and the Event Loop.
 
 // JavaScript → Synchronous by default + Asynchronous capabilities.
 // Browser → Provides Web APIs for asynchronous operations.
+
+// console.log('A');
+// setTimeout(() => {
+//     console.log('B');
+// },3000);
+// console.log('C');
+
+// JavaScript
+//    ↓
+// setTimeout() browser ki Web API ko diya
+//    ↓
+// Browser timer handle karta hai
+//    ↓
+// 2 seconds baad callback ready
+//    ↓
+// Callback Queue
+//    ↓
+// Event Loop
+//    ↓
+// JavaScript Call Stack
+//    ↓
+// "B"
+
+

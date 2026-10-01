@@ -220,8 +220,69 @@
 // console.log(user.address?.city);
 // console.log(user.number?.phone);
 
+// --------------------------------------------------------
 
-//single thread vs synchronous?
+//Single-Threaded vs Synchronous in JavaScript
+// 1. Single-Threaded
+// JavaScript is single-threaded, which means it has one main thread for executing JavaScript code.
+
+// A thread is like a worker that executes code.
+
+// One Main Thread
+//       ↓
+// Task 1
+//       ↓
+// Task 2
+//       ↓
+// Task 3
+
+// It means JavaScript's main execution thread handles one piece of JavaScript code at a time.
+//EXAMPLE
+// console.log("A");
+// console.log("B");
+// console.log("C");
+
+
+// 2. Synchronous
+// Synchronous execution means code is executed in order, 
+// and the next operation waits for the previous operation to finish.
+
+// Example:
+
+// console.log("A");
+// console.log("B");
+// console.log("C");
+
+// Execution:
+
+// A → complete
+//       ↓
+// B → complete
+//       ↓
+// C
+// So, synchronous code follows a sequence.
+
+// +++++++++++++++++++++++++++++++++++++++++++++
+//Imagine one chef 👩‍🍳.
+// Single-threaded
+// There is one chef.
+
+// 1 Chef
+//    ↓
+// Cooking Task
+
+// This represents one main thread.
+
+// Synchronous
+
+// The chef says:
+// "I'll completely finish Task A, then I'll start Task B."
+
+// Task A → Finish → Task B → Finish → Task C
+// +++++++++++++++++++++++++++++++++++++++++++++
+
+
+// --------------------------------------------------------
 
 // callback alag tarike se deal hote js me?
 // console.log('A');
@@ -230,8 +291,40 @@
 // },2000);
 // console.log('C');
 
+// --------------------------------------------------------
+
 //what is callback hell?
+//Callback Hell is a situation where multiple nested callbacks make asynchronous 
+//code difficult to read, understand, and maintain.
 
+//asynchronus
+// console.log('A');
+// setTimeout(() => {
+//     console.log('B');
+// });
+// console.log('C');
 
+//callback hell synchronous banre asynchronus se
+// setTimeout(() => {
+//     console.log('callback hell 1');
+//     setTimeout(() => {
+//         console.log('callback hell 1');
+//     }, 2000);
+// }, 1000);
+
+// Ye asynchronous kyun hai?
+// Kyuki setTimeout() asynchronous operation hai.
+
+// setTimeout()
+//     ↓
+// Browser/Web API timer handle karta hai
+//     ↓
+// 1 second wait
+//     ↓
+// callback execute
+
+// Aur har next setTimeout() bhi asynchronous hai.
+
+// --------------------------------------------------------
 
 
