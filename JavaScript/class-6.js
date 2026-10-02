@@ -149,9 +149,7 @@
 // const result = divide(10, 0);
 // console.log(result);
 
-
 // Exception Handling — throw and Custom Errors
-
 // 1. What is throw?
 // throw is used to manually create/raise an error in JavaScript.send to catch
 // throw new Error("Something went wrong");
@@ -269,7 +267,6 @@
 // ReferenceError: y is not defined
 
 // Syntax sahi hai, lekin code execute karte waqt problem aayi.
-
 // -------------------------------------------------------
 // reduce() is an array method used to reduce all array elements into a single final value.
 
@@ -281,13 +278,23 @@
 
 //flow
 // [1, 2, 3, 4]
-
 // 0 + 1 = 1
 // 1 + 2 = 3
 // 3 + 3 = 6
 // 6 + 4 = 10
-
 // Final result → 10
+
+// const nums = [5, 9, 3, 12, 7];
+// let result = nums.reduce((accumulator, value) => {
+//     return value > accumulator ? value : accumulator;
+// }, 0);
+// console.log(result);
+
+// 0  5 > 0 = 5;
+// 9 > 5 = 9;
+// 3 > 9 = 9;
+// 12 > 9 = 12;
+// 7 > 12 = 12;
 
 // Reduce Real usecase
 // 1. Shopping Cart ka Total Price 🛒
@@ -348,8 +355,6 @@
 // Array ke multiple items ko process karke ek final result banana ho.
 
 // -------------------------------------------------------
-
-
 // Reducer Pattern in JS
 //Reducer Pattern is a pattern where a reducer function takes the
 //current state and an action, then returns a new updated state..
@@ -357,7 +362,6 @@
 // state = current data
 // action = kya karna hai
 // reducer = change kaise karna hai decide karta hai
-
 
 // function Reducer(state, action) {
 //     if (action.type === 'INCREMENT') {
@@ -387,19 +391,17 @@
 // console.log(state); // 1
 
 // Flow:
-
 // Current State + Action
 //         ↓
 //      Reducer
 //         ↓
 //     New State
-
 // -------------------------------------------------------
 // Is the browser asynchronous and JavaScript synchronous?
-// JavaScript executes code synchronously by default, 
+// JavaScript executes code synchronously by default,
 // but it can perform asynchronous operations with the help of Web APIs provided by the browser.
 
-// JavaScript is single-threaded and executes synchronous code by default. 
+// JavaScript is single-threaded and executes synchronous code by default.
 // It also supports asynchronous operations with the help of browser Web APIs and the Event Loop.
 
 // JavaScript → Synchronous by default + Asynchronous capabilities.
