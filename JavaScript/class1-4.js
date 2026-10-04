@@ -1,5 +1,7 @@
 // --------------- Class 1 -----------------
 
+//programing => procedure , function, OOP
+
 // JavaScript data types :In JavaScript, data can be divided into two main groups:
 // Data Types => 1 Primitive 2 Non-Primitive (Reference types)
 
