@@ -327,6 +327,7 @@
 // console.log(c);
 
 // --------------------------------------------------------------
+// this kya hai  =>  this ek keyword hai jo current object ko refer karta hai.
 // this concept : this tells us which object/context the function is being called with.
 
 //Rule 1: Default (Global Call)
@@ -337,6 +338,8 @@
 // }
 // show();
 
+// --------------------------------------------------------------
+
 //Rule 2: Object Method (MOST IMPORTANT)
 // const user = {
 //   name: "Rida",
@@ -345,6 +348,8 @@
 //   },
 // };
 // user.greet();
+
+// --------------------------------------------------------------
 
 // Real Example (Car System)
 // const car = {
@@ -355,20 +360,61 @@
 // };
 // car.start();
 
+// --------------------------------------------------------------
+
 // Rule 3: Lost Context (Biggest Beginner Mistake)
 // const user = {
-//   name: "Ali",
-//   greet: function () {
-//     console.log('this is name',this.name);
-//   },
+//     name: "Ali",
+//     greet: function () {
+//         console.log('this is name', this.name);
+//     },
 // };
-
+// function normally run hora bss this ko fixed ke liye bind use hota
 // const fn = user.greet;
 // fn();
+// fn.call(user)
+// fn.apply(user)
 
-//fixed it 
+// fixed it
+// User object ke greet function ka reference lo,
+// aur iski this ko user ke saath fix karke ek new function de do.
+
 // const fn = user.greet.bind(user);
 // fn();
+
+// --------------------------------------------------------------
+
+// You can manually control this.
+// function greet(mssg, age) {
+//     console.log(mssg, this.name, age);
+// }
+// const user = { name: "Ali" };
+
+// CALL()   =>    function.call(object, arguments)
+// call() immediately calls a function and allows us to set the value of this.
+
+// greet.call(user, 'this is the message', 30);
+
+// APPLY()   =>  function.apply(object,[arguments]);
+// apply() is similar to call(). It immediately calls a function and allows us to set this.
+// The main difference is that arguments are passed inside an array.
+
+// greet.apply(user, ['hello', 21]);
+
+
+// BIND()  =>   function.bind(object,arguments)
+// bind() does not immediately execute the function.
+// It creates and returns a new function with a fixed this value.
+
+// const result = greet.bind(user, 'helloOO', 23);
+// result()
+
+
+// call() → arguments one by one / separately
+// apply() → arguments in an array
+// bind() → arguments one by one / separately, but function later call hota hai
+
+// --------------------------------------------------------------
 
 //Rule 4: Arrow Functions (Special Behavior)
 // const user = {
@@ -394,6 +440,7 @@
 // }
 // user();
 
+// --------------------------------------------------------------
 
 // Real-World Use Case (Frontend)
 // ❌ Wrong (common bug)
@@ -408,6 +455,8 @@
 // Normal function → this = button
 // Arrow function → this = outer scope
 
+// --------------------------------------------------------------
+
 // Rule 5: Constructor Function
 // Constructor rule
 // When a function is called with new, this refers to the newly created object.
@@ -419,25 +468,19 @@
 
 // new User("Ali")
 //       ↓
-// New object created
+// New object created {}
 //       ↓
 // this = new object
 //       ↓
+// "Ali" → name parameter
+//       ↓
+// this.name = name
+//       ↓
 // this.name = "Ali"
 //       ↓
-// object = { name: "Ali" }
-//       ↓
-// u1 → that object
+// u1 → { name: "Ali" }
 
-// CALL()   =>    function.call(object, arguments)
-// call() Function ko call karo aur batao this kis object ko hona chahiye.
-// You can manually control this.
-// function greet(mssg) {
-//     console.log(mssg, this.name);
-// }
-// const user = { name: "Ali" };
-// greet.call(user, 'this is the message'); // Ali
-
+// --------------------------------------------------------------
 
 // Practice Challenge (Important)
 // const obj = {
@@ -453,3 +496,29 @@
 // Function reference same ho sakta hai, lekin this call ke waqt decide hota hai.
 // obj.say()
 // obj2.say();
+
+// --------------------------------------------------------------
+
+// const bioData = {
+//     name: "personName",
+//     age: 20,
+//     gender: "female",
+
+//     greet: function () {
+//         console.log(
+//             `Hi, I'm ${this.name}. I'm ${this.age} years old, and I identify as ${this.gender}.`
+//         );
+//     },
+// };
+
+// let student = {
+//     name: "Atruba",
+//     age: 20,
+//     gender: "female"
+// }
+
+// bioData.greet.call(student);
+// bioData.greet.apply(student);
+// means the student variable is reassigned from the object to the new function.
+// student = bioData.greet.bind(student);
+// student();
