@@ -407,3 +407,49 @@
 // 👉 Why?
 // Normal function → this = button
 // Arrow function → this = outer scope
+
+// Rule 5: Constructor Function
+// Constructor rule
+// When a function is called with new, this refers to the newly created object.
+// function User(name) {
+//     this.name = name;
+// }
+// const u1 = new User("Ali");
+// console.log(u1);
+
+// new User("Ali")
+//       ↓
+// New object created
+//       ↓
+// this = new object
+//       ↓
+// this.name = "Ali"
+//       ↓
+// object = { name: "Ali" }
+//       ↓
+// u1 → that object
+
+// CALL()   =>    function.call(object, arguments)
+// call() Function ko call karo aur batao this kis object ko hona chahiye.
+// You can manually control this.
+// function greet(mssg) {
+//     console.log(mssg, this.name);
+// }
+// const user = { name: "Ali" };
+// greet.call(user, 'this is the message'); // Ali
+
+
+// Practice Challenge (Important)
+// const obj = {
+//     name: "Ali",
+//     say: function () {
+//         console.log(this.name);
+//     },
+// };
+// const obj2 = {
+//     name: "Ahmed",
+//     say: obj.say,
+// };
+// Function reference same ho sakta hai, lekin this call ke waqt decide hota hai.
+// obj.say()
+// obj2.say();
