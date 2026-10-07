@@ -395,3 +395,260 @@
 // } else {
 //     // code
 // }
+
+// Q36 ------------------
+// Why would we use: else if
+// instead of multiple separate if statements?
+
+// We use else if when we have multiple possible conditions, but only one result should run.
+// JavaScript checks the conditions from top to bottom:
+// If the first if is true → run it and stop.
+// If it is false → check the else if.
+// If that is also false → run else.
+
+// With multiple separate if statements, each condition is checked separately, so more than one block can run.
+// const grade = 90;
+// if (grade >= 90) {
+//     console.log("Genius");
+// }
+// if (grade >= 50) {
+//     console.log("Medium");
+// }
+
+// Give an example involving student grades.
+// const grade = 90;
+// if (grade >= 90) {
+//     console.log("Genius");
+// } else if (grade >= 50) {
+//     console.log("Medium");
+// } else {
+//     console.log("Doing hard work");
+// }
+
+
+// Q37 ------------------
+// What is an array?
+// An array is used to store multiple values in a single variable.
+
+// Why would we use an array instead of creating separate variables like:
+// Arrays make it easier to store and manage many related values together.
+
+// let student1 = "Ali";
+// let student2 = "Ahmed";
+// let student3 = "Sara";
+// const students = ["Ali", "Ahmed", "Sara"];
+
+// Q38 ------------------
+// Why does JavaScript use zero-based indexing for arrays?
+// JavaScript arrays use zero-based indexing, which means the first item starts at index 0, not 1
+// For:
+// let fruits = ["Apple", "Banana", "Mango"];
+// What is the index of each fruit?
+// 0,1,2;
+
+// Q39 ------------------
+// What is an object in JavaScript?
+// An object stores data in key-value pairs.
+
+// Explain what properties are.
+// A property is like a variable inside an object that stores a value
+
+// For example:
+// let student = {
+//     name: "Ali",
+//     age: 20
+// };
+// Identify:
+// Object student
+// Properties name , age
+// Property values Ali , 20
+
+
+// Q40 ------------------
+// Explain the difference between an array and an object.
+
+// Array
+// Stores multiple values in an ordered list.
+// Each value has an index (0, 1, 2, etc.).
+// Use an array when you mainly need a list of items.
+
+// Object
+// Stores data as key-value pairs.
+// Use an object when you want to describe something with details.
+
+// When would you use:
+// when we want just list not details
+// ["Ali", "Ahmed", "Sara"]
+
+// and when would you use:
+// we used to to decribe details
+// {
+//     name: "Ali",
+//     age: 20,
+//     department: "Physics"
+// }
+
+// Q41 ------------------
+// Student Result System : Create a JavaScript program using:
+
+// let or const
+// an object
+// if / else if / else
+// comparison operators
+// The object should contain:
+
+// name
+// marks
+
+// Print:
+
+// "A" if marks ≥ 80
+// "B" if marks ≥ 60
+// "C" if marks ≥ 50
+// "Fail" otherwise
+
+// const student = {
+//     name: 'Rida',
+//     marks: 80
+// }
+// if (student.marks >= 80) {
+//     console.log('A');
+// } else if (student.marks >= 60) {
+//     console.log('B');
+// } else if (student.marks >= 50) {
+//     console.log('C');
+// } else {
+//     console.log('Fail');
+// }
+
+// Q42 ------------------
+// Login System
+// Create a program with:
+
+// let username = "admin";
+// let password = "12345";
+// Use && to check whether both username and password are correct.
+
+// Print:
+// Login Successful
+// or
+// Invalid Credentials
+
+// let username = "admin";
+// let password = "12345";
+// if( username === 'admin' && password === '12345'){
+//     console.log('Login Successful');
+// }else{
+//     console.log('Invalid Credentials');
+// }
+
+// Q43 ------------------
+// University Admission
+// Create an object:
+// student
+
+// containing:
+// age
+// marks
+// hasEntryTest
+// A student can be admitted only when:
+
+// age ≥ 18
+// marks ≥ 60
+// entry test is passed
+// Use && to implement the condition.
+
+// const student = {
+//     age: 18,
+//     marks: 60,
+//     hasEnteryTest: true
+// }
+// if (student.age >= 18 && student.marks >= 60 && student.hasEnteryTest) {
+//     console.log('entry test is passed');
+// }
+
+// Q44 ------------------
+// Product Eligibility
+// Create an object:
+
+// customer
+// containing:
+
+// age
+// hasMembership
+// hasCoupon
+// A customer gets a special offer if:
+
+// they are 18 or older AND
+// they either have membership OR have a coupon.
+// Use both:
+
+// &&
+// ||
+// in your condition.
+
+// const customer = {
+//     age: 21,
+//     hasMembership: true,
+//     hasCoupon: false
+// }
+// if (customer.age >= 18 && (customer.hasMembership || customer.hasCoupon)) {
+//     console.log('A customer gets a special offer');
+// }
+
+// Q45 ------------------
+// Student Data
+// Create an array containing at least 3 student objects.
+
+// Each student should have:
+
+// name
+// age
+// marks
+// Example structure:
+
+// let students = [
+//     {
+//         name: "...",
+//         age: ...,
+//         marks: ...
+//     },
+//     {
+//         name: "...",
+//         age: ...,
+//         marks: ...
+//     }
+// ];
+// Then write code to:
+
+// Print the name of the first student.
+// Print the marks of the second student.
+// Check whether the third student passed.
+// Print "Passed" if marks ≥ 50.
+// Otherwise print "Failed".
+
+// let students = [
+//     {
+//         name: "Muqsit",
+//         age: 21,
+//         marks: 70
+//     },
+//     {
+//         name: "Mutib",
+//         age: 14,
+//         marks: 90
+//     },
+//     {
+//         name: "Muhib",
+//         age: 12,
+//         marks: 60
+//     }
+// ];
+// console.log(students[0].name);
+// console.log(students[1].marks);
+// if (students[2].marks >= 50) {
+//     console.log("Passed");
+// } else {
+//     console.log("Failed");
+// }
+
