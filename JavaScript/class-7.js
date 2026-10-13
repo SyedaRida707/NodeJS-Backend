@@ -416,6 +416,14 @@
 
 // --------------------------------------------------------------
 
+// what is call(), apply(), blind()?
+
+// call() → Call now.
+// apply() → Call now with an array.
+// bind() → Create a function now, call it later.
+
+// --------------------------------------------------------------
+
 //Rule 4: Arrow Functions (Special Behavior)
 // const user = {
 //     name: "Ali",
@@ -522,3 +530,111 @@
 // means the student variable is reassigned from the object to the new function.
 // student = bioData.greet.bind(student);
 // student();
+
+// --------------------------------------------------------------
+
+// Dynamic Key in JavaScript
+// A dynamic key is a key whose name is decided by a variable's value.
+
+// let key = "name";
+// const user = {
+//     [key]: "Rida"
+// };
+
+// console.log(user); // { name: "Rida" }
+// Note: Square brackets [] are used to create a dynamic key.
+
+// --------------------------------------------------------------
+
+// Hash Table
+// A hash table is a data structure that stores data in key-value pairs and allows fast searching using keys.
+// name => key , Rida => value
+
+// --------------------------------------------------------------
+
+// A closure is created when an inner function has access to the variables of its outer function, 
+// even after the outer function has finished executing.
+
+// function outer() {
+//     let name = "Rida";
+
+//     function inner() {
+//         console.log(name);
+//     }
+
+//     return inner;
+// }
+
+// const result = outer();
+// result(); // Rida
+
+// outer() mein name variable hai.
+// inner() us variable ko access karta hai.
+// outer() finish ho gaya, phir bhi inner() ko name yaad hai.
+
+// in callStack outer() function come create execution content and return inner function then callStack empty function finish.
+//the inner function run come in callStack create execution context and the variable of outer function get through heap memory.
+
+// --------------------------------------------------------------
+
+// ============================  Execution Context (Code chalana) ===================================
+// Execution Context = ek environment/jagah jahan JavaScript ka code run hota hai.
+// Ab actual code execute/run hona start hota hai.
+// Execution Context ke 2 Phases hote hain
+
+// Phase 1: Creation Phase 🏗️  =>   Is phase me code run nahi hota, sirf tayari hoti hai.
+
+// JavaScript:
+
+// Memory banati hai.
+// Variables ke liye jagah reserve karti hai.
+// Functions ko memory me save karti hai.
+// Hoisting isi phase me hoti hai.
+
+// Example:
+// console.log(a);             // undefined
+// var a = 10;
+
+// ==========================================
+
+// Phase 2: Execution phase    =>   Ab JavaScript code ko line-by-line execute karti hai.
+
+// Example:
+
+// var a = 10;
+// console.log(a);     // 10
+
+// Execution Phase mein:
+// a = 10 → a mein 10 assign hota hai
+// console.log(a) → 10 print hota hai
+
+
+// ==========================================================
+
+// Execution Context is an environment in which JavaScript code is evaluated and executed.
+
+// It has two main phases:
+// Phase 1: Creation Phase 🏗️
+
+// In this phase, JavaScript prepares the execution environment. The code is not executed line by line yet.
+
+// - Memory is prepared for variables and functions.
+// - Function declarations are stored and made available.
+// - `var` variables are initialized with `undefined`.
+// - `let` and `const` are created but remain uninitialized until their declarations are evaluated.
+// - Hoisting is related to this phase.
+
+// Example:
+// console.log(a); // undefined
+// var a = 10;
+
+// Phase 2: Execution Phase ▶️
+
+// In this phase, JavaScript executes the code line by line.
+
+// var a = 10;
+// console.log(a); // 10
+
+// Remember: Creation Phase = preparation; Execution Phase = code runs;
+
+// --------------------------------------------------------------
