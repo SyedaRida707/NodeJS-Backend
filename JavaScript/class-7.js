@@ -638,3 +638,311 @@
 // Remember: Creation Phase = preparation; Execution Phase = code runs;
 
 // --------------------------------------------------------------
+
+// ---------------Classes and Object by SHARDA------------------
+
+// A JS Object is an entity having state and behaviour (properties & method).
+// JS Object have a special property called prototype. it create by default when object and array create. 
+// It has special methods that we can use, like `Object.setPrototypeOf()` or in array .push().
+// we can set prototype using ( Name.__proto__ = object)
+
+// Prototype in JavaScript
+
+//  A prototype is an object from which another object can access properties and methods.
+//  JavaScript objects have an internal prototype link by default, except objects created without a prototype.
+//  1 METHOD We can set an object's prototype using `Object.setPrototypeOf(object, prototypeObject)`.
+//  2 METHOD`__proto__` is a legacy way to access or set an object's prototype.
+
+
+// const student = {
+//     check() {
+//         console.log('All student is present');
+//     }
+// }
+
+// const teacher1 ={
+//     name : 'ATRUBA'
+// }
+// const teacher2 ={
+//     name : 'RIDA'
+// }
+
+// teacher1.__proto__ = student;
+// Object.setPrototypeOf(teacher1, student);
+// console.log(teacher1.check === student.check); // true
+
+// If an object and its prototype have the same method, the object's own method will be used.
+// const teacher2 = {
+//     name: 'RIDA',
+//     check() {
+//         console.log('My Student 100% present');
+//     }
+// }
+// teacher2.__proto__ = student;
+
+
+// ---------------Classes in JS------------------
+// Classes are used when we want to create multiple objects using the same template.
+// class is a program-code (template, blueprint) for creating objects.
+// Those objects will have some state (properties) & some behaviour (functions) inside it.
+
+// The constructor() method initializes a new object.
+// The new keyword calls the constructor() when an object is created.
+// If we do not define a constructor(), JavaScript provides a default constructor.
+// We can initialize and set the object's properties inside the constructor().
+
+
+// syntax
+
+// class myClass {        // Blueprint
+//     constructor() {};
+//     myMethod() {};
+// }
+
+// const myObj = new myClass(); // Object
+
+
+// ------------EXAMPLE---------
+// class Toyota {
+//     constructor(brand,launch) {
+//         console.log('creating new object');
+//         this.brand = brand;
+//         this.launch = launch;
+//     }
+//     start() {
+//         console.log('Start');
+//     }
+//     stop() {
+//         console.log('stop');
+//     }
+//     brandName(brand) {
+//         this.brandCompany = brand;
+//     }
+// }
+// const fortuner = new Toyota('toyota',2026);
+// console.log(fortuner);
+
+// const swift = new Toyota('Suzuki',2022);
+// console.log(swift);
+
+
+// console.log(typeof fortuner);
+// fortuner.start();
+// fortuner.stop();
+// fortuner.brandName('toyota');
+// swift.brandName('Suzuki');
+
+
+// ---------------Inheritance in JS------------------
+// inheritance is passing down properties & methods from parent class to child class.
+
+//syntax 
+// class parent {
+
+// }
+// class child extends parent{
+
+// }
+// if child & parent have same method, child's method will be used [method overriding].
+
+
+// ---------EXAMPLE 1----------
+// class parent {
+//     hello() {
+//         console.log('i am come in child');
+//     }
+// };
+
+// class child extends parent { };
+// const obj = new child();
+
+
+
+// ---------EXAMPLE 2----------
+
+// class person {
+//     eat() {
+//         console.log('eating time');
+//     }
+//     sleep() {
+//         console.log('Sleeping time');
+//     }
+// }
+
+// class engineer extends person {
+//     work() {
+//         console.log('just solving problems');
+//     }
+// }
+
+// class doctor extends person {
+//     check() {
+//         console.log('check patients');
+//     }
+// }
+
+// const Obj1 = new engineer();
+// const Obj2 = new doctor();
+
+
+
+
+// (OBJECT ORIENTED PROGRAMMING)-OOP
+
+// fundamental diff b/w OOP and functional programming? what's the problem and where and when to use?
+
+// 1. What is OOP?
+// Object-Oriented Programming (OOP) is a programming approach that organizes code around objects.
+// Objects contain data (properties) and behavior (methods).
+
+// Example:
+
+
+// Object literal
+// const student = {
+//     name: "Rida",
+//     introduce() {
+//         console.log(this.name);
+//     }
+// };
+
+// Here, the object contains both data and a method.
+
+// Class
+// class Student {
+//     constructor(name) {
+//         this.name = name;
+//     }
+
+//     introduce() {
+//         console.log(this.name);
+//     }
+// }
+
+// const student1 = new Student("Rida");
+// const student2 = new Student("Ali");
+
+// student1.introduce()
+// student2.introduce();
+// student.introduce();
+
+// class Student → object banane ka blueprint.
+// constructor() → naye object ki properties initialize karta hai.
+// new Student("Rida") → naya object banata hai.
+// introduce() → method hai.
+
+
+
+
+
+// 2. What is Functional Programming?
+// Functional Programming (FP) is a programming approach that uses functions to process and transform data.
+// avoiding unnecessary changes to existing data.
+
+// Example:
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const result = numbers.filter(num => num > 3);
+
+// console.log(result); // [4, 5]
+
+// Here, the function processes the array and returns a new array.
+
+
+
+
+// 3. FUNDAMENTAL DIFFERENCES: OOP vs FP
+
+// OOP (Object-Oriented Programming):
+// 1. Organizes code around objects.
+// 2. Objects contain data (properties) and methods.
+// 3. Models entities with state and behavior.
+// 4. Objects can change their internal state.
+// 5. Uses concepts like classes, objects, inheritance, and encapsulation.
+
+// FP (Functional Programming):
+// 1. Organizes code around functions.
+// 2. Functions process and transform data.
+// 3. Emphasizes pure functions and immutable data.
+// 4. Avoids unnecessary changes to existing data.
+// 5. Uses concepts like pure functions, immutability, and function composition.
+
+
+// 4. PROBLEMS AND LIMITATIONS
+
+// OOP Problems:
+
+// 1. Shared or frequently changing state:
+// When different parts of a program change the same data,
+// it can become difficult to find and fix bugs.
+
+// 2. Complex inheritance:
+// Too many levels of inheritance can make code difficult to understand.
+
+// 3. Unnecessary classes and objects:
+// Creating classes for simple tasks can make code complicated.
+
+
+// Functional Programming (FP) Problems:
+
+// 1. Complex state management:
+// Managing changing data in complex applications requires careful planning.
+
+// 2. Too many small functions:
+// Using too many unclear functions can make code difficult to follow.
+
+// 3. Creating new objects and arrays:
+// Avoiding changes to existing data may require creating new objects
+// or arrays, which can use extra memory and processing time.
+
+// Note: These problems are not unavoidable.
+// Good design can reduce them.
+
+
+// 5. WHERE AND WHEN TO USE OOP
+
+// OOP is useful when a program contains entities
+// with related data and behavior.
+
+// Examples:
+// 1. Student management systems
+// 2. Banking applications
+// 3. E-commerce systems
+// 4. Games with players and characters
+// 5. Applications with complex business objects
+
+
+// 6. WHERE AND WHEN TO USE FP
+
+// FP is useful when data needs to be processed,
+// calculated, filtered, or transformed.
+
+// Examples:
+// 1. Filtering products by price
+// 2. Calculating shopping cart totals
+// 3. Processing API data
+// 4. Transforming arrays using map(), filter(), and reduce()
+// 5. Writing predictable and reusable functions
+
+
+// 7. CAN WE USE OOP AND FP TOGETHER?
+
+// Yes, JavaScript supports both OOP and FP.
+
+// Example:
+// An e-commerce application can use OOP to organize product objects
+// and FP to calculate discounts or filter products.
+
+
+// 8. CONCLUSION
+
+// OOP organizes code around objects that combine data and behavior.
+
+// FP organizes code around functions that process and transform data.
+
+// Neither approach is always better.
+// Choose the approach that makes the code easier to understand,
+// maintain, and test.
+
+
