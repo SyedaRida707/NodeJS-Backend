@@ -761,11 +761,18 @@
 // ---------EXAMPLE 2----------
 
 // class person {
+//     constructor(){
+//         this.user = 'boss'
+//     }
 //     eat() {
 //         console.log('eating time');
 //     }
 //     sleep() {
 //         console.log('Sleeping time');
+//     }
+//     // same method but child call own method
+//     work(){
+//         console.log('work hard');
 //     }
 // }
 
@@ -785,6 +792,75 @@
 // const Obj2 = new doctor();
 
 
+// ---------------super keyword------------------
+// The super keyword is used to call the contructor of its parent class to access the parent's properties and methods.
+
+// ---------EXAMPLE 1----------
+
+// class person {
+//     constructor(name) {
+//         console.log('enter parent contructor');
+//         this.user = 'boss'
+//         this.name = name
+//     }
+//     eat() {
+//         console.log('eating time');
+//     }
+// }
+
+// class engineer extends person {
+//     // constructor(name) {
+//     //     console.log('enter child contructor');
+//     //     super(); // to invoke parent class constructor
+//     //     this.name = name;
+//     //     console.log('exit child contructor');
+//     // }
+
+//     // also do this
+
+//     constructor(name){
+//         super(name); // to invoke parent class constructor
+//     }
+//     work() {
+//         super.eat();
+//         console.log('just solving problems');
+//     }
+// }
+// const Obj = new engineer('rida');
+
+
+// ---------EXAMPLE 2----------
+// let data = 'secret information'
+// class user {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+//     viewData() {
+//         console.log('Data: ', data);
+
+//     }
+// }
+
+// class admin extends user {
+//     constructor(name, age) {
+//         super(name, age);
+//     }
+//     editData() {
+//         data = 'some new data';
+//     }
+// }
+// const student1 = new user('Rida', 21);
+// const student2 = new user('Sahoon', 18);
+
+// const teacher = new admin('Atruba', 22);
+
+// final
+// Inheritance   	    Parent ki properties aur methods inherit karna
+// extends	            Inheritance establish karna
+// super()	            Parent constructor call karna
+// super.method()	    Parent ka method call karna
+// Method overriding	Child class and parent class mein same method hon isko overriding
 
 
 // (OBJECT ORIENTED PROGRAMMING)-OOP
