@@ -644,6 +644,7 @@
 // A JS Object is an entity having state and behaviour (properties & method).
 // JS Object have a special property called prototype. it create by default when object and array create. 
 // It has special methods that we can use, like `Object.setPrototypeOf()` or in array .push().
+
 // we can set prototype using ( Name.__proto__ = object)
 
 // Prototype in JavaScript
@@ -822,7 +823,7 @@
 //         super(name); // to invoke parent class constructor
 //     }
 //     work() {
-//         super.eat();
+//         super.eat(); // use parent method
 //         console.log('just solving problems');
 //     }
 // }
@@ -860,7 +861,10 @@
 // extends	            Inheritance establish karna
 // super()	            Parent constructor call karna
 // super.method()	    Parent ka method call karna
-// Method overriding	Child class and parent class mein same method hon isko overriding
+// Method overriding	Child class and parent class mein same method hon isko overriding bolty
+
+
+// --------------------------------------------------------------
 
 
 // (OBJECT ORIENTED PROGRAMMING)-OOP
@@ -918,9 +922,7 @@
 // Example:
 
 // const numbers = [1, 2, 3, 4, 5];
-
 // const result = numbers.filter(num => num > 3);
-
 // console.log(result); // [4, 5]
 
 // Here, the function processes the array and returns a new array.
@@ -928,52 +930,63 @@
 
 
 
-// 3. FUNDAMENTAL DIFFERENCES: OOP vs FP
+// 3. Fundamental Differences
 
-// OOP (Object-Oriented Programming):
-// 1. Organizes code around objects.
-// 2. Objects contain data (properties) and methods.
-// 3. Models entities with state and behavior.
-// 4. Objects can change their internal state.
-// 5. Uses concepts like classes, objects, inheritance, and encapsulation.
+// OOP organizes code around objects, while FP organizes code around functions.
+// OOP combines data and methods in objects, while FP uses functions to process data.
 
-// FP (Functional Programming):
-// 1. Organizes code around functions.
-// 2. Functions process and transform data.
-// 3. Emphasizes pure functions and immutable data.
-// 4. Avoids unnecessary changes to existing data.
-// 5. Uses concepts like pure functions, immutability, and function composition.
+// OOP commonly uses classes, objects and inheritance.
+// FP commonly uses pure functions, immutability and higher-order functions.
+
+// OOP may involve changing object state, while FP encourages avoiding unnecessary state changes.
 
 
-// 4. PROBLEMS AND LIMITATIONS
-
-// OOP Problems:
-
-// 1. Shared or frequently changing state:
-// When different parts of a program change the same data,
-// it can become difficult to find and fix bugs.
-
-// 2. Complex inheritance:
-// Too many levels of inheritance can make code difficult to understand.
-
-// 3. Unnecessary classes and objects:
-// Creating classes for simple tasks can make code complicated.
 
 
-// Functional Programming (FP) Problems:
 
-// 1. Complex state management:
-// Managing changing data in complex applications requires careful planning.
+// 4. Problems They Solve
 
-// 2. Too many small functions:
-// Using too many unclear functions can make code difficult to follow.
+// OOP: Helps organize complex programs by grouping related data and behavior into objects.
+// FP: Helps process and transform data through reusable functions, often with fewer side effects.
 
-// 3. Creating new objects and arrays:
-// Avoiding changes to existing data may require creating new objects
-// or arrays, which can use extra memory and processing time.
 
-// Note: These problems are not unavoidable.
-// Good design can reduce them.
+// What problems do OOP and FP solve?
+
+// ------------------Problem with OOP------------------
+// Suppose you are creating a school management system. It has hundreds of students, teachers and courses.
+// If you manage everything through separate variables and functions, organizing related data and 
+// functionality can become difficult.
+// Solution: OOP allows us to organize related data and methods into objects.
+// class Student {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+
+//     study() {
+//         console.log(`${this.name} is studying`);
+//     }
+// }
+
+// const student1 = new Student("Ali", 20);
+// student1.study();
+
+// Here, the Student class provides a reusable blueprint for creating student objects.
+
+
+
+// ------------------Problem with Functional Programming------------------
+
+// Suppose you have hundreds of products and want to find products that cost more than 500 rupees.
+// Writing separate logic for every product would be repetitive.
+// Solution: FP allows us to use reusable functions to process data.
+
+// const prices = [100, 700, 300, 900, 200];
+// const expensivePrices = prices.filter(price => price > 500);
+// console.log(expensivePrices); // [700, 900]
+
+// Here, filter() returns a new array containing prices greater than 500 without modifying the original array.
+
 
 
 // 5. WHERE AND WHEN TO USE OOP
@@ -1005,18 +1018,12 @@
 // 7. CAN WE USE OOP AND FP TOGETHER?
 
 // Yes, JavaScript supports both OOP and FP.
-
 // Example:
 // An e-commerce application can use OOP to organize product objects
 // and FP to calculate discounts or filter products.
 
 
-// 8. CONCLUSION
-
-// OOP organizes code around objects that combine data and behavior.
-
-// FP organizes code around functions that process and transform data.
-
+// CONCLUSION
 // Neither approach is always better.
 // Choose the approach that makes the code easier to understand,
 // maintain, and test.
