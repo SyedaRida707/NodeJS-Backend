@@ -169,7 +169,12 @@
 // Real-life example: A bank account. You can check your balance, but you cannot directly access its private balance property.
 
 // class BankAccount {
+//     // class attribute, instance
 //     #balance = 1000;
+//     constructor(){
+//         // instance attribute
+//         this.#balance = this.#balance
+//     }
 
 //     getBalance() {
 //         return this.#balance;
@@ -179,7 +184,7 @@
 // const account = new BankAccount();
 
 // console.log(account.getBalance()); // 1000
-// console.log(account.#balance); // Error
+// // console.log(account.#balance); // Error
 
 // How does it work?
 // - #balance is a private property.
@@ -216,6 +221,7 @@
 // - Dog is the child class.
 // - extends allows Dog to inherit from Animal.
 // - The dog object can use both eat() and bark().
+
 // Remember: Inheritance = Code reusability.
 
 
@@ -277,4 +283,10 @@
 // - #startEngine() is a private method.
 // - The user calls start() without needing to know the internal implementation.
 // - The internal engine operation is hidden from direct access.
+
 // Remember: Abstraction = Hide implementation details.
+
+
+// --------------------------------------------------------------
+
+// Decorator function?

@@ -1,20 +1,60 @@
 // The function passed as an argument = Callback Function.
 // A function that takes another function as an argument OR returns a function = Higher-Order Function.
 
+// EXAMPLE higher Order
+
 // function b(a) {
 //     console.log('b');
 //     a();
-// return a();
+//     return a();
 // }
 
 // function c() {
 //     console.log('c');
 // }
 
-// higher order function or decorative function or iska order 1 hai
-// c is Callback function 
+// b is higher order or iska order 1 hai
+// c is Callback function
 // b(c);
-// b(c,d,e); to iska order 3 hai 
+// b(c,d,e); to iska order 3 hai
+
+// EXAMPLE 1 higher Order + Decorative function
+
+// function b(a) {
+//     return function () {
+//         console.log("b");
+//          a();
+//     };
+// }
+// function c() {
+//     console.log('c');
+// }
+// const result = b(c);
+// result();
+
+// Higher-Order Function: A function that takes another function as an argument or returns a function.
+// Decorator Function: A function that adds extra functionality to an existing function without 
+// directly changing its original code add behaviour.
+
+// HOF is a general concept; a decorator is used to enhance a function's behavior
+
+// EXAMPLE 2
+
+// function greet() {
+//     console.log("Hello!");
+// }
+
+// function decorator(fn) {
+//     return function () {
+//         console.log("Start");
+//         fn();
+//         console.log("End");
+//     };
+// }
+
+// const result = decorator(greet);
+// result();
+
 
 // example
 // function greet(callback) {
@@ -32,7 +72,7 @@
 //     callback('Rida');
 // }
 //            //received value
-// //anonymouse function jis ka koi name nhi hota 
+// //anonymouse function jis ka koi name nhi hota
 // greet(function(n){
 //     console.log(n);
 // });
@@ -201,7 +241,7 @@
 //    ↓ no
 // undefined return karo
 
-// "Agar address exist karta hai, to uski city do. Agar nahi karta, 
+// "Agar address exist karta hai, to uski city do. Agar nahi karta,
 //  to error mat do, simply undefined return karo."
 
 // const user = {
@@ -234,7 +274,7 @@
 // console.log("C");
 
 // 2. Synchronous
-// Synchronous execution means code is executed in order, 
+// Synchronous execution means code is executed in order,
 // and the next operation waits for the previous operation to finish.
 
 // Example:
@@ -269,14 +309,14 @@
 // callback alag tarike se deal hote js me?
 // console.log('A');
 // setTimeout(function(){
-//     console.log('B come after 2 seconds');  
+//     console.log('B come after 2 seconds');
 // },2000);
 // console.log('C');
 
 // --------------------------------------------------------
 
 //what is callback hell?
-//Callback Hell is a situation where multiple nested callbacks make asynchronous 
+//Callback Hell is a situation where multiple nested callbacks make asynchronous
 //code difficult to read, understand, and maintain.
 
 //asynchronus example
