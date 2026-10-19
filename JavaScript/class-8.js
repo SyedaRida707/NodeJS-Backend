@@ -376,11 +376,9 @@
 //     }
 // }
 
-
 // const s1 = new Settings();
 // const s2 = new Settings();
 // console.log(s1);
-
 
 // console.log(Settings.instance);
 // console.log(s1.instance);
@@ -388,9 +386,6 @@
 // console.log(s1 === s2); // true
 // console.log(s1.instance === Settings.instance); // false
 // console.log(s1 === Settings.instance); // true same object refference
-
-
-
 
 // Settings.instance → class ki property.
 // this.instance → current object ki property.
