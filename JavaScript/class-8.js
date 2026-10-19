@@ -324,6 +324,7 @@
 // Singleton Pattern is a design pattern that ensures only one instance of a class is created and 
 // provides a way to access that instance.
 
+
 // Real-life example: Ek application mein shared settings ka ek hi central object ho, 
 // jise different parts of the application use karein.
 
@@ -338,87 +339,67 @@
 // Remember: Singleton = One instance, shared access.
 
 
-// --------------------------------------------------------------
-
-
-
 // class Settings {
 //     constructor() {
-
-
-//         // if (Settings.myobj) {
-//         //     console.log(Settings.myobj);
-//         //     return Settings.myobj;
-//         // }
+//         if (Settings.myobj) {
+//             return Settings.myobj;
+//         }
 
 //         Settings.myobj = this;
-
-
-//         // console.log(this);
-
-
 //         this.theme = "dark";
 //     }
 // }
-
 // const s1 = new Settings();
 // console.log(s1);
 
 // const s2 = new Settings();
 
-// // console.log(s1 === s2); // true
+
+// console.log(s1 === s2); // true
 // console.log(s1.theme);  // dark
-
-
-
-
-
-
-
-
-
-
+// console.log(Settings.myobj.theme); // dark
 
 
 // static is used to define properties and methods that belong to the class itself rather than individual instances of the class.
 
-class Settings {
-    static instance;
+// class Settings {
+//     static instance;
 
-    constructor() {
-        if (Settings.instance) {
-            return Settings.instance;
-        }
-        this.instance = 'rr';
-        this.theme = "dark";
-        // Is line mein Settings.instance s1 object ke andar add nahi ho raha. Ye Settings class ki property mein object ka reference store kar raha hai.
-        Settings.instance = this;
-    }
-}
-
-
-const s1 = new Settings();
-const s2 = new Settings();
-console.log(s1);
+//     constructor() {
+//         if (Settings.instance) {
+//             return Settings.instance;
+//         }
+//         this.instance = 'rr';
+//         this.theme = "dark";
+//         // Is line mein Settings.instance s1 object ke andar add nahi ho raha. Ye Settings class ki property mein object ka reference store kar raha hai.
+//         Settings.instance = this;
+//     }
+// }
 
 
-console.log(Settings.instance);
-console.log(s1.instance);
-
-console.log(s1 === s2); // true
-console.log(s1.instance === Settings.instance); // false
-console.log(s1 === Settings.instance); // true
+// const s1 = new Settings();
+// const s2 = new Settings();
+// console.log(s1);
 
 
+// console.log(Settings.instance);
+// console.log(s1.instance);
+
+// console.log(s1 === s2); // true
+// console.log(s1.instance === Settings.instance); // false
+// console.log(s1 === Settings.instance); // true same object refference
 
 
-// Settings.instance → class ki property. 
+
+
+// Settings.instance → class ki property.
 // this.instance → current object ki property.
 
 // s1 aur Settings.instance dono usi object ko refer karte hain.
 // {instance: 'rr', theme: 'dark'}
 
 
+// Without static: Settings.myobj = this se class par property dynamically add hoti hai.
+// With static: static myobj; se class ke andar property pehle hi declare kar dete hain.
 
-
-
+// --------------------------------------------------------------
