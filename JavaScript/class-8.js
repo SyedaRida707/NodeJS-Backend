@@ -162,6 +162,14 @@
 
 // --------------------------------------------------------------
 
+// what is class and object in js?
+// Class: A class is a blueprint or template used to create objects.
+// Object: An object is an instance of a class that contains properties and methods.
+
+
+// --------------------------------------------------------------
+
+
 // OOP have 4 pillars
 
 // 1. Encapsulation
@@ -289,4 +297,128 @@
 
 // --------------------------------------------------------------
 
-// Decorator function?
+// Decorator function? (higher order)
+// Higher-Order Function: A function that takes another function as an argument or returns a function.
+// Decorator Function: A function that adds extra functionality to an existing function without 
+// directly changing its original code add behaviour.
+
+// function greet() {
+//     console.log("Hello!");
+// }
+
+// function decorator(fn) {
+//     return function () {
+//         console.log("Start");
+//         fn();
+//         console.log("End");
+//     };
+// }
+
+// const result = decorator(greet);
+// result();
+
+// --------------------------------------------------------------
+
+// what is singleton pattern ?
+
+// Singleton Pattern is a design pattern that ensures only one instance of a class is created and 
+// provides a way to access that instance.
+
+// Real-life example: Ek application mein shared settings ka ek hi central object ho, 
+// jise different parts of the application use karein.
+
+
+// Singleton Pattern kyun use karte hain?
+// - Shared application settings.
+// - Centralized logging system.
+// - Aisi services jahan ek shared instance ki zaroorat ho.
+
+// Key point: Multiple variables ho sakte hain, lekin woh same object ko refer kar sakte hain.
+
+// Remember: Singleton = One instance, shared access.
+
+
+// --------------------------------------------------------------
+
+
+
+// class Settings {
+//     constructor() {
+
+
+//         // if (Settings.myobj) {
+//         //     console.log(Settings.myobj);
+//         //     return Settings.myobj;
+//         // }
+
+//         Settings.myobj = this;
+
+
+//         // console.log(this);
+
+
+//         this.theme = "dark";
+//     }
+// }
+
+// const s1 = new Settings();
+// console.log(s1);
+
+// const s2 = new Settings();
+
+// // console.log(s1 === s2); // true
+// console.log(s1.theme);  // dark
+
+
+
+
+
+
+
+
+
+
+
+
+// static is used to define properties and methods that belong to the class itself rather than individual instances of the class.
+
+class Settings {
+    static instance;
+
+    constructor() {
+        if (Settings.instance) {
+            return Settings.instance;
+        }
+        this.instance = 'rr';
+        this.theme = "dark";
+        // Is line mein Settings.instance s1 object ke andar add nahi ho raha. Ye Settings class ki property mein object ka reference store kar raha hai.
+        Settings.instance = this;
+    }
+}
+
+
+const s1 = new Settings();
+const s2 = new Settings();
+console.log(s1);
+
+
+console.log(Settings.instance);
+console.log(s1.instance);
+
+console.log(s1 === s2); // true
+console.log(s1.instance === Settings.instance); // false
+console.log(s1 === Settings.instance); // true
+
+
+
+
+// Settings.instance → class ki property. 
+// this.instance → current object ki property.
+
+// s1 aur Settings.instance dono usi object ko refer karte hain.
+// {instance: 'rr', theme: 'dark'}
+
+
+
+
+
