@@ -187,10 +187,7 @@
 // Student.showUniversity();
 // // Ilma University
 
- 
 // Calling s1.showUniversity() produces a TypeError because the static method is not available on the instance.
-
-// Difference Between Normal and Static Members
 
 // Normal members	                Static members
 // Belong to individual objects.	Belong to the class itself.
@@ -198,3 +195,5 @@
 // Example: s1.showName()	        Example: Student.showUniversity()
 
 // Remember: Normal = Object, Static = Class.
+
+// --------------------------------------------------------------
