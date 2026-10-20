@@ -181,3 +181,17 @@
 // Dog is eating
 
 // Here, super.eat() calls the parent's method, and the child adds its own behavior.
+
+// --------------------------------------------------------------
+
+// instanceof checks whether an object belongs to a class or its prototype chain.
+
+// class Animal {}
+// class Dog extends Animal {}
+// let d = new Dog();
+
+// console.log(d instanceof Dog);    // true
+// console.log(d instanceof Animal); // true
+// console.log(d instanceof Array);  // false
+
+// --------------------------------------------------------------
