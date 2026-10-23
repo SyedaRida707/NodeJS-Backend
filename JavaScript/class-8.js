@@ -173,6 +173,7 @@
 // OOP have 4 pillars
 
 // 1. Encapsulation
+// Abstraction hides complex details and provides a simple interface.
 // Meaning: Encapsulation means combining data and methods in one class and protecting the data from direct access.
 // Real-life example: A bank account. You can check your balance, but you cannot directly access its private balance property.
 
