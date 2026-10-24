@@ -50,7 +50,6 @@
 // console.log(fruits);
 // console.log(f2);
 
-
 // Primitive assignment copies the value.
 // Object assignment copies the reference to the same object.
 
@@ -74,7 +73,7 @@
 
 // Compile Time
 // Compile time is the time when our code is converted into machine language before
-// the program runs.- and execute it.
+// the program runs. and also we say before execution.
 //syntax error jab code karte hue aye 
 
 // Run Time
@@ -133,6 +132,16 @@
 // }
 // console.log(x); // ✅ 5
 
+// JavaScript mein var function-scoped hota hai.
+// function test() {
+//     var name = "Rida";
+//     console.log(name); // Rida
+// }
+
+// test();
+// console.log(name); // not accessible
+
+
 
 // Global aur Local Variable
 // let c = 2; // Global
@@ -171,8 +180,8 @@
 // };
 
 
-// let and const are hoisted, but they cannot be accessed before initialization because they are in the
-// Temporal Dead Zone (TDZ).
+// let and const are hoisted, but they cannot be accessed before 
+// initialization because they are in theTemporal Dead Zone (TDZ).
 
 // let myVar = 10;
 // const greet = () => {

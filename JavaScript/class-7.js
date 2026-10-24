@@ -595,6 +595,7 @@
 // console.log(a);             // undefined
 // var a = 10;
 
+
 // ==========================================
 
 // Phase 2: Execution phase    =>   Ab JavaScript code ko line-by-line execute karti hai.
@@ -607,7 +608,6 @@
 // Execution Phase mein:
 // a = 10 → a mein 10 assign hota hai
 // console.log(a) → 10 print hota hai
-
 
 // ==========================================================
 
@@ -636,6 +636,13 @@
 // console.log(a); // 10
 
 // Remember: Creation Phase = preparation; Execution Phase = code runs;
+
+// - Global Execution Context: Created when the script starts.
+// - Function Execution Context: Created when hello() is called.
+
+// An execution context is an environment in which JavaScript code is executed. 
+// It contains information about variables, the this value, and the outer scope. 
+// The Global Execution Context is created when JavaScript starts executing a script.
 
 // --------------------------------------------------------------
 
