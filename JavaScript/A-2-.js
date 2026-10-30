@@ -464,3 +464,182 @@
 // const add = (a, b) => {
 //     return a + b;
 // }
+
+// 39. Scope
+// What does scope mean in JavaScript?
+//Scope defines where a variable can be accessed in JavaScript. 
+// A global variable can be accessed from different parts of the code, 
+// while a local variable can only be accessed within its defined scope.
+
+// Explain why this code produces a problem:
+// function test() {
+//     let x = 10;
+// }
+
+// console.log(x);
+// because it scope is function we dont use outside 
+// The variable x is declared inside the function using let, 
+// so we cannot access it outside that function.
+
+// 40. Callback Functions
+// What is a callback function?
+// A callback function is a function passed as an argument to another function.
+
+// Explain the basic idea using:
+
+// function process(callback) {
+//     callback();
+// }
+// Why might we want to pass a function into another function?
+// We pass a function into another function so that we can 
+// call it when needed to perform a specific task.
+
+
+// 41. Student Grade Function
+// Create a function:
+
+// getGrade(marks)
+// It should return:
+
+// A → 80 or above
+// B → 60–79
+// C → 50–59
+// Fail → below 50
+// Example:
+
+// console.log(getGrade(85));
+// Expected:
+
+// A
+
+// function getGrade(marks) {
+//     if (marks >= 80) {
+//         return 'A';
+//     } else if (marks >= 60 && marks <= 79) {
+//         return 'B';
+//     } else if (marks >= 50 && marks <= 59) {
+//         return 'C';
+//     } else {
+//         return 'Fail';
+//     }
+// }
+// console.log(getGrade(85));
+
+// 42. Calculator Functions
+// Create four functions:
+
+// add()
+// subtract()
+// multiply()
+// divide()
+// Each function should accept two numbers and return the appropriate result.
+
+// For example:
+
+// console.log(add(10, 5));
+// console.log(multiply(4, 3));
+
+// function add(a, b) {
+//     return a + b
+// }
+// function subtract(a, b) {
+//     return a - b
+// }
+// function multiply(a, b) {
+//     return a * b
+// }
+// function divide(a, b) {
+//     return a / b
+// }
+
+// console.log(add(10, 5));
+// console.log(multiply(4, 3));
+// console.log(subtract(9, 7));
+// console.log(divide(6, 2));
+
+
+// 43. Student Eligibility
+// Create a function:
+
+// isEligible(age, marks, hasEntryTest)
+// A student is eligible when:
+
+// age ≥ 18
+// marks ≥ 60
+// entry test is passed
+
+// Use: &&
+// The function should return either: "Eligible" or "Not Eligible"
+
+// function isEligible(age, marks, hasEntryTest) {
+//     if (age >= 18 && marks >= 60 && hasEntryTest === true) {
+//         return 'Eligible'
+//     } else {
+//         return "Not Eligible"
+//     }
+// }
+// console.log(isEligible(22,65,true));
+
+
+// 44. Array Function
+// Create a function:
+
+// getHighest(numbers)
+// that receives an array of numbers and returns the highest number.
+
+// Example:
+
+// let numbers = [10, 45, 23, 78, 12];
+
+// console.log(getHighest(numbers));
+// Expected:
+
+// 78
+// Hint: You may use a loop, but don't use Math.max().
+
+// let numbers = [10, 45, 23, 78, 12];
+// function getHighest(numbers) {
+//     let highest = numbers[0];
+//     for (let i = 0; i < numbers.length; i++) {
+//         if (numbers[i] > highest) {
+//             highest = numbers[i]
+//         }
+
+//     }
+//     return highest
+// }
+// console.log(getHighest(numbers));
+
+// 45. Callback Challenge
+// Create a function:
+
+// calculate(a, b, operation)
+// where operation is a function.
+
+// For example:
+
+// calculate(10, 5, add);
+// calculate(10, 5, multiply);
+// Create separate functions for:
+
+// add
+// subtract
+// multiply
+// The calculate() function should use the callback to perform the requested operation.
+
+// function calculate(a, b, operation) {
+//     return operation(a, b);
+// }
+// function add(a, b) {
+//     return a + b
+// }
+// function subtract(a, b) {
+//     return a - b
+// }
+// function multiply(a, b) {
+//     return a * b
+// }
+// function divide(a, b) {
+//     return a / b
+// }
+// console.log(calculate(10, 5, multiply));
