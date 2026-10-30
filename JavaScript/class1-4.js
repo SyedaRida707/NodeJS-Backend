@@ -668,4 +668,4 @@
 // const copy = structuredClone(arr);
 // copy[2].name = "Atruba";
 // console.log(arr[2].name);   // Rida
-// console.log(copy[2].name);  // Ali
+// console.log(copy[2].name);  // Atruba

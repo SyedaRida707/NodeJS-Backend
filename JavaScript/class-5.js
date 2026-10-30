@@ -5,7 +5,7 @@
 
 // function b(a) {
 //     console.log('b');
-//     a();
+//     // a();
 //     return a();
 // }
 
@@ -33,7 +33,7 @@
 // result();
 
 // Higher-Order Function: A function that takes another function as an argument or returns a function.
-// Decorator Function: A function that adds extra functionality to an existing function without 
+// Decorator Function: A function that adds extra functionality to an existing function without
 // directly changing its original code add behaviour.
 
 // HOF is a general concept; a decorator is used to enhance a function's behavior
@@ -169,7 +169,7 @@
 // let names = ["Rida", "ATRUBA", "QURAT"];
 // let result = names.filter((n)=>{
 //     // return n !== n.toUpperCase();
-//     return n === n.toUpperCase();
+//     // return n === n.toUpperCase();
 // });
 // console.log(result);
 
@@ -290,20 +290,6 @@
 // C
 // So, synchronous code follows a sequence.
 
-// +++++++++++++++++++++++++++++++++++++++++++++
-//Imagine one chef 👩‍🍳.
-// Single-threaded
-// There is one chef.
-
-// 1 Chef
-//    ↓
-// Cooking Task : This represents one main thread.
-
-// Synchronous
-// The chef says: "I'll completely finish Task A, then I'll start Task B."
-// Task A → Finish → Task B → Finish → Task C
-// +++++++++++++++++++++++++++++++++++++++++++++
-
 // --------------------------------------------------------
 
 // callback alag tarike se deal hote js me?
@@ -326,14 +312,6 @@
 // });
 // console.log('C');
 
-//callback hell synchronous banre asynchronus se
-// setTimeout(() => {
-//     console.log('callback hell 1');
-//     setTimeout(() => {
-//         console.log('callback hell 1');
-//     }, 2000);
-// }, 1000);
-
 // Ye asynchronous kyun hai?
 // Kyuki setTimeout() asynchronous operation hai.
 
@@ -346,4 +324,12 @@
 // callback execute
 
 // Aur har next setTimeout() bhi asynchronous hai.
+
+//callback hell synchronous banre asynchronus se
+// setTimeout(() => {
+//     console.log('callback hell 1');
+//     setTimeout(() => {
+//         console.log('callback hell 1');
+//     }, 2000);
+// }, 1000);
 // --------------------------------------------------------
