@@ -69,7 +69,7 @@
 //     let x = y + 1;
 //     console.log(2);
 // } catch (error) {
-//     let x = y + 1;
+//     // let x = y + 1;
 //     console.log('something wrong'); //its not error its message application crash nhi hogi
 // }
 
@@ -103,8 +103,10 @@
 // try {
 //     let x = y + 1;
 // } catch (error) {
-//     console.log(error);
+//     console.log(error.name);
 //     console.log(error.message);
+//     console.log(error.stack);
+//     console.log(error);
 // }
 
 //error is an object:
@@ -118,9 +120,9 @@
 
 // EXAMPLE 1: Beginner Level
 // try {
-//   let num = JSON.parse("abc"); // invalid JSON
+//     let num = JSON.parse("abc"); // invalid JSON
 // } catch (err) {
-//   console.log("Invalid JSON");
+//     console.log("Invalid JSON");
 // }
 // ✔ Prevents app crash ✔ User-friendly message
 
@@ -196,7 +198,6 @@
 // throw → raises/sends the error
 // catch(err) receives the Error object
 
-// throw can be used for validation
 
 // try → contains code that may cause an error.
 // catch → handles the error.
@@ -237,7 +238,7 @@
 // EXAMPLE 4: Cleanup Example
 // try {
 //   console.log("Opening file");
-//   throw new Error();
+// //   throw new Error();
 // } catch {
 //   console.log("Error occurred");
 // } finally {

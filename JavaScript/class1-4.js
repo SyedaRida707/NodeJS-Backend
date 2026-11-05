@@ -15,7 +15,7 @@
 // Symbol
 
 // Primitive values are immutable
-// mmutable = cannot be changed
+// immutable = cannot be changed
 
 // 2 Non-primitive / reference types mutable
 // Object
@@ -184,6 +184,9 @@
 // initialization because they are in theTemporal Dead Zone (TDZ).
 
 // let myVar = 10;
+// Normal function declaration can be called before declaration, 
+// but arrow function stored in const or let cannot be called before initialization.
+// greet();
 // const greet = () => {
 //   console.log("Welcome, If you are reading this, Don't forget you are awesome");
 // };
@@ -290,6 +293,14 @@
 //     }
 // }
 
+// let obj = {
+//     name : 'rida',
+//     age : 21
+// }
+// for(keys in obj){
+//     console.log(keys,obj[keys]);
+// }
+
 
 // Use a while loop when you don’t know how many times the loop will run,
 // but you know the condition.
@@ -348,7 +359,7 @@
 
 // Spread Operator
 // let arr = [1,2,3];
-// // 1: Copying an array
+// // // 1: Copying an array shallow copy
 // let newArr = [...arr];
 // newArr[0] = 17;
 // console.log('Original',arr);

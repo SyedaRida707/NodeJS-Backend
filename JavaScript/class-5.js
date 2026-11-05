@@ -1,5 +1,6 @@
 // The function passed as an argument = Callback Function.
-// A function that takes another function as an argument OR returns a function = Higher-Order Function.
+// A function that takes another function as an argument OR 
+// returns a function = Higher-Order Function.
 
 // EXAMPLE higher Order
 
@@ -168,7 +169,7 @@
 
 // let names = ["Rida", "ATRUBA", "QURAT"];
 // let result = names.filter((n)=>{
-//     // return n !== n.toUpperCase();
+//     return n !== n.toUpperCase();
 //     // return n === n.toUpperCase();
 // });
 // console.log(result);
