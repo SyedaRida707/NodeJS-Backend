@@ -4,8 +4,8 @@
 // acquires properties and methods from a parent class.
 
 // Main benefit: Code reusability. It allows us to reuse existing code instead of writing it again.
-
-// Flow: The flow of inheritance is Top to Bottom. This means the Parent class is at the top, and the Child class is below it.
+// Flow: The flow of inheritance is Top to Bottom. This means the Parent class is at the top,
+//        and the Child class is below it.
 
 // Example:
 // class Animal {
@@ -32,7 +32,8 @@
 // 1. Single Inheritance: One child class inherits from one parent class.
 // Example: Animal → Dog
 
-// 2. Multilevel Inheritance: A child class becomes a parent for another class. forming a chain. (Grandparent -> Parent -> Child).
+// 2. Multilevel Inheritance: A child class becomes a parent for another class. forming a chain. 
+//                            (Grandparent -> Parent -> Child).
 // Example: Animal → Dog → Puppy
 // Puppy inherits from Dog, and Dog inherits from Animal.
 
@@ -78,7 +79,8 @@
 
 // MRO is especially important in Python when multiple inheritance is used.
 
-// Note: JavaScript uses a prototype chain for method lookup rather than Python's class MRO for multiple inheritance.
+// Note: JavaScript uses a prototype chain for method lookup rather than Python's 
+//       class MRO for multiple inheritance.
 
 // example
 // class Animal {
@@ -102,31 +104,30 @@
 
 // --------------------------------------------------------------
 
-// What is an Interface?
-// Definition: An interface defines a contract that specifies the structure or methods a class should provide.
-// An interface describes what a class should provide, rather than implementing all its behavior itself.
+// What is an Interface? in TYPESCRIPT
+// An interface defines rules that a class must follow by implementing required methods and properties.
 
-// Example in TypeScript:
-// ```
-// interface Animal {
-//     sound(): void;
+// interface Car {
+//     start(): void;
+//     stop(): void;
 // }
 
-// class Dog implements Animal {
-//     sound() {
-//         console.log("Woof!");
+// class BMW implements Car {
+//     start() {
+//         console.log("Car started");
+//     }
+
+//     stop() {
+//         console.log("Car stopped");
 //     }
 // }
-// ```
-// Here:
-// - interface Animal defines a contract.
-// - sound() is the required method.
-// - implements Animal means the Dog class follows that contract.
-// Important points:
-// - JavaScript does not have a built-in interface keyword.
-// - TypeScript and Java support interfaces.
-// - extends is used for class inheritance.
-// - implements is used in TypeScript to follow an interface contract.
+
+// interface Car → Rules define karta hai.
+// implements Car → Class un rules ko follow karti hai.
+// start() and stop() → Methods implement kiye gaye hain.
+
+
+// Important: JavaScript mein direct interface nahi hota, TypeScript mein hota hai.
 
 // --------------------------------------------------------------
 
