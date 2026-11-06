@@ -173,7 +173,6 @@
 // OOP have 4 pillars
 
 // 1. Encapsulation
-// Abstraction hides complex details and provides a simple interface.
 // Meaning: Encapsulation means combining data and methods in one class and protecting the data from direct access.
 // Real-life example: A bank account. You can check your balance, but you cannot directly access its private balance property.
 
@@ -193,7 +192,7 @@
 // const account = new BankAccount();
 
 // console.log(account.getBalance()); // 1000
-// // console.log(account.#balance); // Error
+// console.log(account.#balance); // Error
 
 // How does it work?
 // - #balance is a private property.
@@ -235,7 +234,8 @@
 
 
 // 3. Polymorphism
-// Meaning: Polymorphism means "many forms." The same method name can produce different behaviors for different objects.
+// Meaning: Polymorphism means "many forms." The same method name can produce different behaviors 
+// for different objects.
 // Real-life example: Different animals make different sounds.
 // class Dog {
 //     sound() {
@@ -266,6 +266,8 @@
 
 
 // 4. Abstraction
+// Abstraction hides complex details and provides a simple interface.
+
 // Meaning: Abstraction means hiding internal implementation details and showing only the necessary functionality.
 // Real-life example: When you start a car, you use the start button or key. You do not need to know all the internal engine operations.
 // class Car {
@@ -322,6 +324,7 @@
 
 // what is singleton pattern ?
 
+// Ek class se sirf ek hi object (instance) create karna.
 // Singleton Pattern is a design pattern that ensures only one instance of a class is created and 
 // provides a way to access that instance.
 
@@ -361,7 +364,8 @@
 // console.log(Settings.myobj.theme); // dark
 
 
-// static is used to define properties and methods that belong to the class itself rather than individual instances of the class.
+// static is used to define properties and methods that belong to the class itself rather 
+// than individual instances of the class.
 
 // class Settings {
 //     static instance;
@@ -372,7 +376,8 @@
 //         }
 //         this.instance = 'rr';
 //         this.theme = "dark";
-//         // Is line mein Settings.instance s1 object ke andar add nahi ho raha. Ye Settings class ki property mein object ka reference store kar raha hai.
+//         // Is line mein Settings.instance s1 object ke andar add nahi ho raha. 
+//         // Ye Settings class ki property mein object ka reference store kar raha hai.
 //         Settings.instance = this;
 //     }
 // }

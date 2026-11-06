@@ -65,7 +65,7 @@
 // student1.greet(); // Hello Rida
 
 //-----------------------------------------------------------
-// Spread Operator :The spread operator takes an iterable or object and expands its contents.
+// Spread Operator:Spread operator takes an iterable (like string or array) or object and expands its contents.
 // const fruits = ["apple", "banana", "mango"];
 // const newFruits = [...fruits, "orange"];
 // console.log(newFruits);
@@ -547,7 +547,8 @@
 // --------------------------------------------------------------
 
 // Hash Table
-// A hash table is a data structure that stores data in key-value pairs and allows fast searching using keys.
+// A hash table is a data structure that stores data in key-value 
+// pairs and allows fast searching using keys.
 // name => key , Rida => value
 
 // --------------------------------------------------------------
@@ -572,8 +573,10 @@
 // inner() us variable ko access karta hai.
 // outer() finish ho gaya, phir bhi inner() ko name yaad hai.
 
-// in callStack outer() function come create execution content and return inner function then callStack empty function finish.
-//the inner function run come in callStack create execution context and the variable of outer function get through heap memory.
+// in callStack outer() function come create execution content and return 
+// inner function then callStack empty function finish.
+// the inner function run come in callStack create execution 
+// context and the variable of outer function get through heap memory.
 
 // --------------------------------------------------------------
 
@@ -801,7 +804,8 @@
 
 
 // ---------------super keyword------------------
-// The super keyword is used to call the contructor of its parent class to access the parent's properties and methods.
+// The super keyword is used to call the contructor of its parent class to access 
+// the parent's properties and methods.
 
 // ---------EXAMPLE 1----------
 
