@@ -24,7 +24,7 @@
 // console.log(account.balance); // 1000 // Getter
 
 // account.balance = 1500;       // Setter
-// console.log(account.balance); // 2000
+// console.log(account.balance); // 1500
 
 // --------------------------------------------------------------
 
