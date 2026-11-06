@@ -192,7 +192,7 @@
 // let d = new Dog();
 
 // console.log(d instanceof Dog);    // true
-// console.log(d instanceof Animal); // true
+// console.log(d instanceof Animal); // true // d prototype se Animal arha tabhi true hai
 // console.log(d instanceof Array);  // false
 
 // --------------------------------------------------------------
