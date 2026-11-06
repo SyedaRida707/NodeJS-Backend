@@ -168,7 +168,9 @@
 
 
 // --------------------------------------------------------------
-
+// Instance: An instance is an object created from a class using the new keyword.
+// Class Attribute: Jo property class ke level par define hoti hai.
+// Instance Attribute: Jo property har object (instance) ke liye hoti hai.
 
 // OOP have 4 pillars
 
@@ -177,7 +179,7 @@
 // Real-life example: A bank account. You can check your balance, but you cannot directly access its private balance property.
 
 // class BankAccount {
-//     // class attribute, instance
+//     // class attribute
 //     #balance = 1000;
 //     constructor(){
 //         // instance attribute
@@ -385,6 +387,7 @@
 // const s1 = new Settings();
 // const s2 = new Settings();
 // console.log(s1);
+
 
 // console.log(Settings.instance);
 // console.log(s1.instance);
