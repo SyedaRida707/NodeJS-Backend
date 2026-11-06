@@ -1,31 +1,35 @@
 // Concurrency
-// Concurrency means managing multiple tasks during overlapping periods by 
-// switching between them or coordinating their progress.
+// Concurrency means handling multiple tasks by switching between them, 
+// making progress on more than one task at a time.
 
-// Example: One chef manages multiple dishes.
+// Easy Example: 
+// You are cooking food and washing dishes. You switch between both tasks.
 
 // Parallelism
-// Parallelism means executing multiple tasks at exactly the same time, 
-// usually using multiple CPU cores or workers.
+// Parallelism means executing multiple tasks at the exact same time using multiple CPU cores or threads.
 
-// Example: Two chefs prepare different dishes at the same time.
+// Easy Example:
+// Two people are working at the same time. One is cooking food and the other is washing dishes.
 
 // Difference
 // - Concurrency: Multiple tasks make progress over overlapping periods.
 // - Parallelism: Multiple tasks execute simultaneously.
 
-// Remember:Concurrency is about managing multiple tasks; parallelism is about doing multiple tasks at the same time.
+// Remember:Concurrency is about managing multiple tasks; 
+// parallelism is about doing multiple tasks at the same time.
 
 // --------------------------------------------------------------
 
 // Process vs Thread 
 
-// 1 Process: A program that is running.
-// Example: Chrome open karna.
+// Process
+// A process is a program that is currently running in a computer.
+// Easy Example: When you open Google Chrome, it runs as a process.
 
-// 2 Thread: A thread performs a task inside a process.
-
-// Example: Chrome mein webpage load karna.
+// Thread
+// A thread is the smallest unit of execution inside a process.
+// Easy Example: Chrome can use multiple threads to handle different tasks, 
+// such as loading pages and handling user actions.
 
 // Difference
 
@@ -33,14 +37,15 @@
 // - Thread: Us program ke andar kaam karne wala unit.
 // - One process can have multiple threads.
 
-// Easy example: Process aik restaurant hai, aur threads us restaurant ke workers hain. Har worker apna task karta hai.
+// Easy example: Process aik restaurant hai, 
+// aur threads us restaurant ke workers hain. Har worker apna task karta hai.
 // Remember: Process = Program, Thread = Worker.
 
 // --------------------------------------------------------------
 
 // Main Thread vs Child Thread 
 // 1. Main Thread: The main thread is the primary thread that starts executing a program.
-// 2. Child Thread: A child thread is an additional thread created by a program to perform another task.
+// 2. Child Thread: An additional thread created by a program to perform tasks separately from the main thread.
 
 // Example
 // Maan lo ek restaurant hai:
@@ -72,7 +77,6 @@
 // }, 1000);
 
 // --------------------------------------------------------------
-
 // How to perform asynchronous before promises?
 // Before Promises: JavaScript used callbacks to handle asynchronous operations.
 
@@ -116,7 +120,7 @@
 
 // --------------------------------------------------------------
 // What is fetch() in JavaScript?
-// Definition: fetch() is a JavaScript function used to request data from a server or API.
+// fetch() is a JavaScript function used to request data from a server or API.
 
 // Example
 // fetch("https://jsonplaceholder.typicode.com/users/1")
