@@ -161,49 +161,53 @@
 // --------------------------------------------------------------
 
 // What is Thread Pool?
-// Definition: A Thread Pool is a group of reusable threads that execute tasks.
+// Thread Pool is a group of worker threads in Node.js. It performs some tasks in the background.
+// It is managed by libuv. By default, it has 4 worker threads.
 
-// Purpose: It helps handle certain background tasks efficiently.
+// Example:
+// When Node.js reads a file, Thread Pool can handle
+// this task in the background.
 
-// Example: Node.js uses a Thread Pool for some file system operations and other tasks.
+// Main Thread = Runs JavaScript code.
+// Thread Pool = Performs some background tasks.
+// Event Loop = Handles callbacks when tasks are completed.
 
-// Remember: Event Loop callbacks ko manage karne mein help karta hai,
-// jabke Thread Pool kuch tasks ko background mein execute karta hai.
+// Main Thread = Manager
+// Thread Pool = Workers
+// Event Loop = Manager ko batata hai ke worker ka task complete ho gaya.
 
-// Easy words mein, Thread Pool multiple threads ka group hota hai jo tasks ko execute karne ke liye ready rehta hai.
+// Manager orders receive karta hai aur workers ko tasks de deta hai.
+// Workers background mein apna kaam karte hain. Manager meanwhile doosre orders handle karta rehta hai.
 
-// JavaScript mein Node.js kuch time-consuming tasks, jaise file system operations, ke liye libuv ke
-// Thread Pool ka use kar sakta hai.
-
-// Example
-// Socho ek restaurant mein 4 workers hain. 🍽️
-// - Har worker ek task karta hai.
-// - Naya task aaye toh available worker usay handle karta hai.
-// - Har task ke liye naya worker banane ki zaroorat nahi hoti.
+// Example:
+// Socho 4 workers hain aur 5 files read karni hain.
+// Pehli 4 files par workers kaam karenge. Jab koi worker free hoga, woh 5th file par kaam karega.
+// Remember: Default Thread Pool Size = 4 worker threads.
 
 // --------------------------------------------------------------
 
 // What is libuv?
-// Easy words mein, libuv ek library hai jo Node.js ko asynchronous tasks handle karne mein help karti hai.
+// libuv is a library in Node.js that helps handle asynchronous operations using the Event Loop and Thread Pool.
+// libuv helps Node.js perform background tasks without blocking the main thread.
 
 // Example
-// Node.js mein jab hum file read karte hain, toh libuv background mein file-reading operation
-// handle karne mein help kar sakti hai.
+// When Node.js reads a file, libuv helps handle
+// the file-reading operation in the background.
 
-// Easy Notes
-// Definition: libuv is a library used by Node.js to handle asynchronous I/O operations and manage the Event Loop.
 
-// Main functions:
-
+// ----Main functions:---
 // - Manages the Event Loop.
 // - Provides a Thread Pool for certain tasks.
 // - Helps handle asynchronous operations.
 
 // Remember:
-
 // - Event Loop: Callbacks ko manage karta hai.
 // - Thread Pool: Kuch tasks background mein execute karta hai.
 // - libuv: In systems ko provide karne wali library hai.
+
+// Event Loop = Manages callbacks.
+// Thread Pool = Performs background tasks.
+// libuv = Provides Event Loop and Thread Pool.
 
 // --------------------------------------------------------------
 
@@ -211,12 +215,14 @@
 // Macrotask and Microtask
 
 // 1. Macrotask
-// Macrotasks are tasks scheduled to execute later, such as `setTimeout()` and `setInterval()` callbacks.
+// Macrotasks are tasks scheduled to execute later, 
+// such as `setTimeout()` and `setInterval()` callbacks.
 
 // Examples: `setTimeout()`, `setInterval()`, event callbacks.
 
 //  2. Microtask
-// Microtasks are small tasks that execute after the current synchronous code finishes and before the next macrotask.
+// Microtasks are small tasks that execute after the current synchronous code 
+// finishes and before the next macrotask.
 
 // Examples: Promise `.then()`, `.catch()`, `.finally()`, and `queueMicrotask()`.
 
@@ -224,15 +230,13 @@
 // Macrotask: Executes after microtasks are processed.
 // Microtask: Executes before the next macrotask.
 
-// Important: JavaScript completes synchronous code first, then processes microtasks before moving to the next macrotask.
+// Important: JavaScript completes synchronous code first, 
+// then processes microtasks before moving to the next macrotask.
 
 
 // console.log("Start");
-
 // setTimeout(() => console.log("Macro Task"), 0);
-
 // Promise.resolve().then(() => console.log("Micro Task"));
-
 // console.log("End");
 
 // --------------------------------------------------------------
