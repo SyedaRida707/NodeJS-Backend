@@ -1,35 +1,141 @@
 // Acces Modifier -> public -> private -> protected.
-// #balance -> private variable -> class attribute
-// getter -> find , setter -> values set.
+
+// Access Modifiers in OOPs
+// 1. Public = Everyone
+// 2. Private = Only my class
+// 3. Protected = My class + child classes.
+
+
+// 1. PUBLIC  >>   Har jagah se access kar sakte hain.
+
+
+// class Student {
+//     name = "Atruba";
+// }
+
+
+// let s1 = new Student();
+// console.log(s1); // Object
+// console.log(s1.name); // Atruba
+
+// ------------------------------------------------------------------------------
+
+
+// 2. Private   >>   Sirf class ke andar access kar sakte hain.
+
+// class Student {
+//     #marks = 90;
+
+//     showMarks() {
+//         console.log(this.#marks);
+//     }
+// }
+
+// let s1 = new Student();
+// console.log(s1);
+// s1.showMarks(); // 90
+// // console.log(s1.#marks); // Error
+
+// ------------------------------------------------------------------------------
+
+
+// 3. PROTECTED   >>  Generally class ke andar aur child class mein access karne ke liye hota hai.
+// JavaScript mein protected keyword built-in nahi hai. Ye TypeScript mein available hai.
+
+// Protected = Accessible inside the class and its child classes.
+// It cannot be accessed directly from outside the class.
+
+// JavaScript does not have a built-in protected keyword.
+// Protected is available in TypeScript.
+
+// Protected allows the parent class and child classes
+// to access the property or method.
+
+// Example: TYPESCRIPT code
+// class Person {
+//     protected name = "Atruba";
+// }
+// class Student extends Person {
+//     showName() {
+//         console.log(this.name); // Atruba
+//     }
+// }
+// let obj = new Student();
+// obj.showName(); // Atruba
+// console.log(obj.name); // Error
+
+
+
+// ------------------------------------------------------------------------------
+
+// PRIVATE VARIABLE & CLASS ATTRIBUTE
+
+// #balance → Private instance attribute (sirf class ke andar accessible).
+// static → Class attribute (class se belong karta hai, object se nahi).
+
+// class Student {
+//     #marks = 90;              // Private instance attribute
+//     static school = "ABC";    // Class attribute
+// }
+
+// // - #marks → Private hai, aur har object ke liye apni alag value ho sakti hai.
+// // - static school → Class attribute hai, jo class se belong karta hai, object se nahi.
+
+
+// let s1 = new Student();
+// console.log(s1);
+// console.log(s1.school);  // undefined
+// console.log(Student.school); // ABC
+
+// useCase: class attribute ka use tab hota hai jab koi value sabhi objects ke liye 
+// common ho aur humein usay har object mein alag se store nahi karna hota.
+
 // class can access private variable but object can't.
 
-// set and get keyword in encapsulation.
+// ------------------------------------------------------------------------------
+
+// getter -> find , setter -> values set.
+
 // - Getter (get): Private value ko read karne ka tareeqa.
 // - Setter (set): Private value ko update karne ka tareeqa.
 
 // class Bank {
-//   #balance = 1000;
+//     #balance = 1000;
 
-//   get balance() {
-//     return this.#balance;
-//   }
+//     // Normal method
+//     getBalance() {
+//         return this.#balance;
+//     }
 
-//   set balance(value) {
-//     return this.#balance = value;
-//   }
+//     // Normal method with argument
+//     setBalance(newbalance) {
+//         this.#balance = newbalance;
+//     }
+
+//     get balance() {
+//         return this.#balance;
+//     }
+
+//     set balance(value) {
+//         this.#balance = value;
+//     }
 // }
 
 // let account = new Bank();
+// console.log(account.getBalance());
+// account.setBalance(2000);
+// console.log(account.getBalance());
 
 // console.log(account.balance); // 1000 // Getter
 
-// account.balance = 1500;       // Setter
+// account.balance = 1500;       // Setter  property ki tarhn likhty to setter call hojata hai
 // console.log(account.balance); // 1500
 
-// --------------------------------------------------------------
+// ---------------------------------------------------------------------
 
 // What is Event Loop?
-// Definition: Event Loop is a mechanism in JavaScript that helps execute asynchronous callbacks when the Call Stack is empty.
+// Event Loop is a mechanism in JavaScript that helps execute asynchronous 
+// callbacks when the Call Stack is empty.
 
 // How it works:
 // 1. JavaScript executes code in the Call Stack.
@@ -61,12 +167,12 @@
 
 // Example: Node.js uses a Thread Pool for some file system operations and other tasks.
 
-// Remember: Event Loop callbacks ko manage karne mein help karta hai, 
+// Remember: Event Loop callbacks ko manage karne mein help karta hai,
 // jabke Thread Pool kuch tasks ko background mein execute karta hai.
 
 // Easy words mein, Thread Pool multiple threads ka group hota hai jo tasks ko execute karne ke liye ready rehta hai.
 
-// JavaScript mein Node.js kuch time-consuming tasks, jaise file system operations, ke liye libuv ke 
+// JavaScript mein Node.js kuch time-consuming tasks, jaise file system operations, ke liye libuv ke
 // Thread Pool ka use kar sakta hai.
 
 // Example
@@ -81,7 +187,7 @@
 // Easy words mein, libuv ek library hai jo Node.js ko asynchronous tasks handle karne mein help karti hai.
 
 // Example
-// Node.js mein jab hum file read karte hain, toh libuv background mein file-reading operation 
+// Node.js mein jab hum file read karte hain, toh libuv background mein file-reading operation
 // handle karne mein help kar sakti hai.
 
 // Easy Notes

@@ -179,7 +179,7 @@
 // Real-life example: A bank account. You can check your balance, but you cannot directly access its private balance property.
 
 // class BankAccount {
-//     // class attribute
+//     // instance attribute
 //     #balance = 1000;
 //     constructor(){
 //         // instance attribute
