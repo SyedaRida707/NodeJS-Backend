@@ -62,7 +62,8 @@
 
 // There are two common types in JavaScript classes:
 // - Instance property: Belongs to an individual object. Example: this.name
-// - Static property: Belongs to the class itself and is shared at the class level. Example: static university = "Ilma University"
+// - Static property: Belongs to the class itself and is shared at the class level. 
+//                    Example: static university = "Ilma University"
 
 // Easy example:
 
@@ -101,56 +102,48 @@
 // --------------------------------------------------------------
 
 // Data Integrity
-// Data integrity is the accuracy, consistency, and reliability of data. It ensures that data remains 
-// correct and is not improperly changed or corrupted.
 
-// Example
-// A university stores a student's record:
+// Data Integrity means keeping data correct, accurate, and consistent.
+// It ensures that data is not changed incorrectly.
+
+// Example:
 // - Student Name: Ali
 // - Student ID: 101
 // - Marks: 85
 
-// If Ali's actual marks are 85 but 850 are stored in the database by mistake, data integrity is affected.
+// If Ali's actual marks are 85 but 850 are saved by mistake, data integrity is affected.
 
 // Importance of Data Integrity
-// 1. It keeps data accurate and correct.
-// 2. It prevents incorrect information.
-// 3. It maintains reliable records.
-// 4. It helps make correct decisions.
+// 1. Keeps data correct.
+// 2. Prevents wrong information.
+// 3. Maintains reliable records.
+// 4. Helps make correct decisions.
 
-// Remember: Data Integrity = Correct and reliable data.
+// Remember: Data Integrity = Correct and reliable 
 
 // --------------------------------------------------------------
 
-// Input Sanitization
-// Input sanitization is the process of cleaning or transforming user input into a suitable format. 
-// It helps maintain data quality and reduce security risks.
+// Input Sanitization?
+// Input Sanitization means cleaning user input to remove unwanted or harmful data before using or storing it.
 
-// Example in JavaScript
+// Example:
 // let name = "   Ali   ";
 // let cleanName = name.trim();
-// console.log(cleanName); // "Ali"
+// console.log(cleanName); // Ali
 
 
 // Explanation:
-// - name contains extra spaces.
-// - trim() removes spaces from the beginning and end.
-// - cleanName contains "Ali".
+// - trim() removes extra spaces from the beginning and end.
+// - cleanName contains "Ali"
 
-// Validation vs. Sanitization
-// Validation	                            Sanitization
-// Checks whether input follows the rules.	Cleans or transforms input into a suitable format.
-// Example: Age must be 18 or above.	    Example: Removing extra spaces from a name.
+// Importance
+// 1. Keeps data clean.
+// 2. Removes unwanted characters or spaces.
+// 3. Helps reduce security risks.
+// Remember: Input Sanitization = Cleaning user input before using it.
 
-// Importance of Input Sanitization
-// 1. It helps maintain clean data.
-// 2. It helps remove unwanted characters or formatting.
-// 3. It can reduce security risks when combined with appropriate security measures.
-
-// Note: trim() alone does not provide complete security. Websites also need proper validation
-// and context-specific protections.
-
-// Remember: Input Sanitization = Clean or transform user input.
+// Note: trim() alone does not make input completely secure.
+// use conditions for validation
 
 // --------------------------------------------------------------
 
