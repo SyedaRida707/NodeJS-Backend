@@ -730,3 +730,101 @@
 // What advantage does this provide?
 // It provides code reusability and reduces code repetition.
 
+
+
+
+
+// 38. Arrays of Objects
+// Why is this structure useful in real applications?
+// We use an array of objects when we want to store information 
+// about multiple students in one array.
+
+// let students = [
+//     {
+//         name: "Ali",
+//         age: 20,
+//         marks: 80
+//     },
+//     {
+//         name: "Sara",
+//         age: 21,
+//         marks: 90
+//     }
+// ];
+
+// How can a loop process all these students?
+// A loop uses the array's index to access each student object one by one.
+
+
+
+
+// 39. Choosing the Right Loop
+// Explain when you might use:
+// i use for loop when i know number of iteration
+
+// We use a while loop when we don't know the number of iterations in advance. 
+// It continues running as long as the condition is true.
+
+// We use a do...while loop when we want the code to execute at least once, 
+// even if the condition is false.
+
+// for ,while ,do...while
+
+// Give one example for each.
+// for(let a = 1; a<=5; a++){
+//     console.log(a);
+// }
+
+
+// let a = 1;
+// while(a<=5){
+//  console.log(a);
+//     a++;
+// }
+
+
+// let a = 1;
+// do {
+//     console.log(a);
+//     a++
+// } while (a <= 5);
+
+
+
+
+// 40. Connected Concepts
+// Explain how the following concepts can work together in a real program:
+// These six concepts work together in a program. Variables store data, 
+// arrays store multiple values, objects organize related information, 
+// conditions make decisions, loops process data repeatedly, and functions make code reusable.
+
+// variables
+//       ↓
+// arrays
+//       ↓
+// objects
+//       ↓
+// conditions
+//       ↓
+// loops
+//       ↓
+// functions
+
+// Give one example of a program that could use all six.
+// let family = [
+//     { name: 'Atruba' },
+//     { name: 'Rida' },
+//     { name: 'Muqsit' },
+//     { name: 'Mutib' },
+//     { name: 'Muhib' }
+// ];
+
+// function Students(names) {
+//     for (let i = 0; i < names.length; i++) {
+//         console.log('Before Name ', names[i]);
+//         if (names[i].name[0] === names[i].name[0].toUpperCase()) {
+//             console.log('After ', names[i].name.toUpperCase());
+//         }
+//     }
+// }
+// Students(family)
