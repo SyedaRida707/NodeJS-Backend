@@ -1144,122 +1144,125 @@
 // Use a condition such as:
 // marks >= 50
 
-// 7. Use break
+
+// 7. Add Students
+
+// 8. Use break
 // Stop searching once the requested student is found.
 
 
-let students = [
-    {
-        name: "Ali",
-        age: 20,
-        marks: 85
-    },
-    {
-        name: "Sara",
-        age: 19,
-        marks: 70
-    },
-    {
-        name: "maria",
-        age: 20,
-        marks: 92
-    },
-    {
-        name: "rida",
-        age: 21,
-        marks: 52
-    }
-];
+// let students = [
+//     {
+//         name: "Ali",
+//         age: 20,
+//         marks: 85
+//     },
+//     {
+//         name: "Sara",
+//         age: 19,
+//         marks: 70
+//     },
+//     {
+//         name: "maria",
+//         age: 20,
+//         marks: 92
+//     },
+//     {
+//         name: "rida",
+//         age: 21,
+//         marks: 52
+//     }
+// ];
 
-// Print all student
-function printStudents(student) {
-    for (let i = 0; i < student.length; i++) {
-        console.log(student[i].name);
-    }
-}
-printStudents(students);
-
-
-// print grades of students
-function getGrade(student) {
-    for (let i = 0; i < student.length; i++) {
-        if (student[i].marks >= 80) {
-            console.log('A');
-
-        } else if (student[i].marks >= 60) {
-            console.log('B');
-
-        } else if (student[i].marks >= 50) {
-            console.log('C');
-
-        } else {
-            console.log('Fail');
-
-        }
-    }
-}
-getGrade(students)
+// // Print all student
+// function printStudents(student) {
+//     for (let i = 0; i < student.length; i++) {
+//         console.log(student[i].name);
+//     }
+// }
+// printStudents(students);
 
 
-// find student
-function findStudent(student) {
-    for (let i = 0; i < student.length; i++) {
-        if (student[i].name === 'rida') {
-            console.log('Found', student[i].name);
-            break;
-        }
-    }
-}
-findStudent(students)
+// // print grades of students
+// function getGrade(student) {
+//     for (let i = 0; i < student.length; i++) {
+//         if (student[i].marks >= 80) {
+//             console.log('A');
+
+//         } else if (student[i].marks >= 60) {
+//             console.log('B');
+
+//         } else if (student[i].marks >= 50) {
+//             console.log('C');
+
+//         } else {
+//             console.log('Fail');
+
+//         }
+//     }
+// }
+// getGrade(students)
 
 
-// calculate average marks
-function calculateAverage(student) {
-    let total = 0;
-    for (let i = 0; i < student.length; i++) {
-        total = total + student[i].marks
-    }
-    let avg = total / student.length;
-    console.log(avg);
-}
-calculateAverage(students)
+// // find student
+// function findStudent(student) {
+//     for (let i = 0; i < student.length; i++) {
+//         if (student[i].name === 'rida') {
+//             console.log('Found', student[i].name);
+//             break;
+//         }
+//     }
+// }
+// findStudent(students)
 
 
-
-// find highest scorer
-let highest = students[0].marks
-function highestscorer(student) {
-    for (let i = 0; i < student.length; i++) {
-        if (student[i].marks > highest) {
-            highest = student[i].marks
-            console.log(highest);
-        }
-    }
-}
-highestscorer(students)
+// // calculate average marks
+// function calculateAverage(student) {
+//     let total = 0;
+//     for (let i = 0; i < student.length; i++) {
+//         total = total + student[i].marks
+//     }
+//     let avg = total / student.length;
+//     console.log(avg);
+// }
+// calculateAverage(students)
 
 
 
-
-// check passing students
-function passingStudent(student) {
-    for (let i = 0; i < student.length; i++) {
-        if (student[i].marks >= 50) {
-            console.log(student[i].name, 'is passing');
-        } else {
-            console.log(student[i].name, 'is Fail');
-        }
-    }
-}
-passingStudent(students);
+// // find highest scorer
+// let highest = students[0].marks
+// function highestscorer(student) {
+//     for (let i = 0; i < student.length; i++) {
+//         if (student[i].marks > highest) {
+//             highest = student[i].marks
+//             console.log(highest);
+//         }
+//     }
+// }
+// highestscorer(students)
 
 
 
 
-// addstudents in existing array
-function addStudent(student) {
-    students.push(...student)
-}
-addStudent([{ name: 'atruba', marks: 78, age: 22 }, { name: 'mama', marks: 78, age: 22 }])
-console.log(students);
+// // check passing students
+// function passingStudent(student) {
+//     for (let i = 0; i < student.length; i++) {
+//         if (student[i].marks >= 50) {
+//             console.log(student[i].name, 'is passing');
+//         } else {
+//             console.log(student[i].name, 'is Fail');
+//         }
+//     }
+// }
+// passingStudent(students);
+
+
+
+
+// // addstudents in existing array
+// function addStudent(student) {
+//     students.push(...student)
+// }
+// addStudent([{ name: 'atruba', marks: 78, age: 22 }, { name: 'mama', marks: 78, age: 22 }])
+// console.log(students);
 
